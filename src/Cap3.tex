@@ -1,0 +1,149 @@
+\chapter{Numeri Reali}
+\thispagestyle{fancy}
+
+	L'insieme dei numeri reali \`{e} definibile attraverso una \emph{definizione assiomatica}:
+	\begin{lem}[Definizione Assiomatica di $\R$]\index{Numeri! Reali}
+		In $\R$ sono definite le operazioni di \emph{somma} e \emph{prodotto} con le seguenti propriet\`{a}.
+		\begin{enumerate}
+			\item \textbf{COMMUTATIVA} $(a+b = b+a) \land (a \cdot b = b \cdot a) \footnotemark$
+			\item \textbf{ASSOCIATIVA} $a+(b+c) = (a+b)+c = a+b+c$ \\ $a \cdot (b \cdot c) = (a \cdot b) \cdot c = a \cdot b \cdot c$
+			\item \textbf{ELEMENTO NEUTRO} $(a+0 = a) \land (a \cdot 1  = a)$
+			\item \textbf{OPPOSTI} $\forall a \in \R \; \exists \; (-a)\; | \; a+(-a) = 0$ \\ $\forall (a \neq 0) \in \R \; \exists \;a^{-1} \; | \; a \cdot a^{-1} = 1$
+			\item \textbf{RIFLESSIVA} $a \leq a$
+			\item \textbf{ANTISIMMETRICA} $(a \leq b ) \wedge ( b \leq a ) \Rightarrow a=b$
+			\item \textbf{TRANSITIVA} $(a \leq b) \wedge (b \leq c) \Rightarrow a \leq c$
+			\item \textbf{DISTRIBUTIVA} $a \cdot (b+c) = (a \cdot b) + (a \cdot c)$
+		\end{enumerate}
+	\end{lem}
+	\footnotetext[1]{Il prodotto di due numeri positivi \`{e} sempre positivo}
+	
+	\section{Intervalli}
+			\begin{lem}[Intervallo Aperto]\index{Intervallo! aperto}
+				Se \emph{a} e \emph{b} sono due numeri reali con \emph{a} < \emph{b}, chiameremo \textbf{\emph{intervallo aperto di estremi a b}}, l'insieme di tutti i numeri reali maggiori di \emph{a} e minori di \emph{b}
+				$$] \; a, \; b \; [ \; = \{x \in \R \; | \; a<x<b\}$$
+			\end{lem}
+			In questo particolare intervallo \emph{a} e/o \emph{b} possono essere rispettivamente $-\infty$ e $+\infty$, allora l'intervallo sar\`{a} del tipo \[ ]-\infty, \; +\infty \;[ \] e corrisponde alla retta dei reali
+			
+			\bigskip
+			
+			\begin{lem}[Intervallo Chiuso]\index{Intervallo! chiuso}
+				Se \emph{a} e \emph{b} sono numeri reali con \emph{a} < \emph{b}, chiameremo \textbf{\emph{intervallo chiuso di estremi a b}}, l'insieme di tutti i numeri reali maggiori o uguali ad \emph{a} e minori o uguali a \emph{b}
+				$$[\; a,\; b\; ] \; = \{x \in \R \; | \; a \leq x \leq b \}$$
+			\end{lem}
+		
+			\bigskip
+			\begin{lem}[Intervallo semiaperto destra e sinistra]\index{Intervallo! semiaperto}
+				Se \emph{a} e \emph{b} sono numeri reali con \emph{a} < \emph{b}, chiameremo \textbf{\emph{intervallo semiaperto a destra di estremi a b}}, l'insieme di tutti i numeri reali maggiori o uguali di \emph{a} e minori di \emph{b}
+				$$[\; a, \; b\; [ \; = \{x \in \R \; | \; a \leq x < b \}$$
+				\medskip
+				Se \emph{a} e \emph{b} sono numeri reali con \emph{a} < \emph{b}, chiameremo \textbf{\emph{intervallo semiaperto a sinistra di estremi a b}}, l'insieme di tutti i numeri reali maggiori di \emph{a} e minori o uguali di \emph{b}
+				$$]\; a, \; b\; ] \; = \{x \in \R \; | \; a < x \leq b \}$$
+			\end{lem}
+		
+			\bigskip
+		
+			\begin{ass}[Assioma di continuit\`{a}]\index{Assioma di continuit\`{a}}
+				Presa comunque una partizione di tutti i punti di una retta in due sottoinsiemi, tale che nessun punto di un sottoinsieme giace tra due punti dell'altro, esiste un punto di un sottoinsieme che giace tra tutti gli altri punti di quel sottoinsieme e tutti i punti dell'altro.
+				\medskip
+				$$\forall\; k \in \R \; \exists! \; \lambda \in \R \; | \; \exists \; a_{k}, b_{k} \in \R \; . \; a_{k} \leq \lambda \leq b_{k}$$
+			\end{ass}
+			
+			\bigskip
+	
+			\begin{lem}[Sottoinsieme Induttivo]\index{Sottoinsieme induttivo}
+				Un insieme \emph{A} $\subset$ $\R$ si dice \textbf{induttivo} se:
+				\begin{enumerate}
+					\item 1 $\in$ \emph{A}
+					\item \emph{x} $\in$ \emph{A} $\Rightarrow$ \emph{x+1} $\in$ \emph{A}
+				\end{enumerate}
+			\end{lem}
+			Da questa definizione di \emph{insieme induttivo} si pu\`{o} dedurre che l'insieme dei numeri naturali $\N$ \`{e} induttivo perch\'{e} intersezione di tutti i sottoinsiemi induttivi di $\R$
+			
+			\medskip
+			
+			\begin{proof} 
+				\begin{enumerate}
+					\item per definizione 1 $\in \N$
+					\item supponendo che \emph{x} $\in \N$ e che quindi \emph{x} $\in$ ad ogni sottoinsieme induttivo di \emph{A} $\Rightarrow$ per definizione, \emph{x+1} $\in$ ai sottoinsiemi induttivi di \emph{A}, quindi anche alla loro intersezione che \`{e} $\N$
+				\end{enumerate}
+			\end{proof}
+	
+	\section{Estremi Superiore ed Inferiore}
+			Per un $\emph{E} \subset \R$, si dice \textbf{\emph{massimo M}} di \emph{E} se 
+			\begin{enumerate}
+				\item \emph{M} \`{e} un maggiorante di \emph{E}, se $\forall \; e \in E \; . \; e \leq M$
+				\item $M \in E$
+			\end{enumerate}
+		
+			\begin{lem}[Estremo Superiore]\index{Estremo! superiore}
+				Sia $E \neq 0 \; \subseteq \R$ si chiama \textbf{estremo superiore} di E il minimo dei maggioranti di E e si indica con $\sup(E)$
+			\end{lem}
+			Le propriet\`{a} dell'estremo superiori sono che:
+			\begin{itemize}
+				\item \emph{sup(E)} \`{e} un maggiorante di \emph{E}
+				\item $\not\exists n \in E \; . \; n < sup(E) \; | \;$ n \`{e} maggiorante di E
+			\end{itemize}
+		
+			\bigskip
+		
+			\begin{lem}[Maggiornate]\index{Maggiorante}
+				Sia $X$ un insieme ordinato e $E \ne \emptyset \subseteq X$. $y \in X$ \`{e} un maggiorante di $E$ se per ogni $x \in E$ si ha $x \le y$
+			\end{lem}
+
+			\begin{ass}[Estremo Superiore]\index{Esistenza di estremo Superiore}
+				Un insieme $E$ non vuoto e limitato superiormente, ha sempre estremo superiore
+			\end{ass}
+			\begin{proof} 
+				Essendo \emph{E} limitato superiormente, esiste un suo maggiorante, $b_{1}$, e non essendo vuoto esiste un numero, $a_{1}$ che non \`{e} maggiorante.\\
+				Costruendo una successione di intervalli dimezzati del tipo $$ c = \frac{a_{1} + b_{1}}{2}$$ e per ogni intervallo prendiamo $a_{2} = a_{1}$ e $b_{2} = c$ se esiste il maggiorante, altrimenti $a_{2} = c$ e $b_{2} = b_{1}$. In questo modo otteniamo una serie di intervalli del tipo $[a_{k}, \; b_{k}]$ tali che $b_{k}$ \`{e} sempre maggiorante di \emph{E}.\\
+				Per l'assioma di continuit\`{a}, l'intersezione di tutti questi intervalli \`{e} costituita dal solo numero $\lambda$ in quanto:
+				\begin{enumerate}
+					\item $\lambda$ \`{e} un maggiorante
+					\item nessun numero minore di $\lambda$ \`{e} maggiorante. 
+					Per assurdo assumiamo che esista $\mu < \lambda$ che sia maggiorante. 
+					Dato che tutti i $b_{k}$ sono maggiori o uguali a $\lambda$ allora $\mu < b_{k}$. 
+					Quindi $\mu$ sarebbe un maggiorante e $a_{k}$ no, ma allora $a_{k} \leq \mu$ e quindi $\mu$ sarebbe contenuto in tutti gli intervalli $[a_{k}, \; b_{k}]$ avendo un assurdo
+				\end{enumerate}
+			quindi $\lambda$ \`{e} l'estremo superiore di \emph{E}
+			\end{proof}
+		
+			\bigskip
+			\begin{lem}[Estremo Inferiore]\index{Estremo! inferiore}
+				Si definisce estremo inferiore di un insieme E, non vuoto e limitato inferiormente, il maggiore dei minoranti m di E, cio\`{e} $\forall e \in E \; . \; e \geq m$, e si indica con $\inf(E)$
+			\end{lem}
+			Le propriet\`{a} dell'estremo inferiore sono:
+			\begin{itemize}
+				\item $\inf(E)$ \`{e} minorante di \emph{E}
+				\item nessun numero maggiore di $\inf(E)$ \`{e} minorante di \emph{E}
+			\end{itemize}
+
+			\begin{lem}[Minorante]\index{Minorante}
+				Sia $X$ un insieme ordinato e $E \ne \emptyset \subseteq X$. $y \in X$ \`{e} un minorante di $E$ se per ogni $x \in E$ si ha $x \ge y$
+			\end{lem}
+		
+			\bigskip
+			
+			Da queste definizioni si pu\`{o} notare che $$\forall x \in E \; . \; \inf(E) \leq x \leq \sup(E) \Rightarrow \inf(E) \leq \sup(E)$$
+			facendo particolare attenzione al $\leq$, perch\`{e} nel caso in cui l'insieme \emph{E} ha un solo elemento allora $\inf(E) = \sup(E)$. Inoltre, se \emph{E} non fosse limitato inferiormente e/o superiormente allora i suoi estremi sarebbero rispettivamente $-\infty$ e $+\infty$
+		
+		\section{Valore Assoluto}
+				\begin{lem}[Valore Assoluto]\index{Valore Assoluto}
+					Si chiama \textbf{valore assoluto} di un numero reale
+					$$|x| = \bigg \{
+						\begin{array}
+							{rl}x & x \geq 0 \\ -x & x < 0 \\
+						\end{array}
+					$$
+					$$|x| = \sqrt{x^2}$$
+					$$|x| = \max\{x, -x\}$$
+				\end{lem}
+			
+				\subsection{Disugalianza triangolare}
+					$$\forall a,b \in \R \; . \; |a+b| \leq |a| + |b|$$\index{Disuguaglianza triangolare}
+					
+					\begin{proof} 
+						$$(\;a \leq |a| \wedge b \leq |b| \Rightarrow a+b \leq |a| + |b|\;) $$ $$\wedge$$
+						$$(\;-a \leq |a| \wedge -b \leq |b| \Rightarrow -a-b \leq |a|+|b|\;)$$ $$\Rightarrow$$
+						$$|a+b| = \max\{(a+b), \;(-a-b)\} \leq |a| + |b|$$
+					\end{proof}
+	

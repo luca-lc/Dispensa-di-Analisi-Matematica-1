@@ -1,0 +1,217 @@
+\documentclass[11pt, oneside, a4paper]{report}
+
+
+% ---------------------------------------------------------------------------- %
+% 																PACCHETTI								   									 %
+% ---------------------------------------------------------------------------- %
+\usepackage[italian]{babel} %pacchetto per cambio lingua
+\usepackage{titlesec}
+\usepackage{amsfonts}
+\usepackage[bottom]{footmisc} %note a pie pagina
+\usepackage{graphicx}
+\usepackage{amsthm}	%pacchetto per matematica
+\usepackage{amsmath} %pacchetto per matematica
+\usepackage{longtable} %pachcetto per tabella su più pagine
+\usepackage{multirow} %pacchetto per unire righe
+\usepackage[bookmarksnumbered]{hyperref} %pacchetto per indice con link
+\usepackage[dvipsnames]{xcolor} %colori
+\usepackage[toc]{appendix} %creazione di appendice
+\usepackage{imakeidx} %inidice analitico
+\usepackage{nimbusmono} %tipo di font
+\usepackage[T1]{fontenc} %tipo di font
+\usepackage{everysel} %selezionare il font
+\usepackage[style=authoryear]{biblatex}
+\usepackage{guit}
+\usepackage{fancyhdr}
+
+
+
+%------ SET TESTATE PAGINE ----%
+\pagestyle{fancy}
+\lhead{}
+\chead{Dispensa Analisi Matematica I}
+\rhead{}
+\lfoot{}
+\cfoot{\thepage\\[.6ex]\tiny Luca Canessa}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{0.4pt}
+%----------------------------------%
+
+
+% ---------------------------------------------------------------------------- %
+% 															IMPOSTAZIONI								   								 %
+% ---------------------------------------------------------------------------- %
+%---- cambio font -----%
+\renewcommand*\familydefault{\ttdefault} %% Only if the base font of the document is to be typewriter style
+\EverySelectfont{
+		\fontdimen2\font=0.4em% interword space
+		\fontdimen3\font=0.2em% interword stretch
+		\fontdimen4\font=0.1em% interword shrink
+		\fontdimen7\font=0.1em% extra space
+		\hyphenchar\font=`\-% to allow hyphenation
+	}
+\linespread{1.5}
+%----------------------%
+%-- set link e colori --%
+\definecolor{index}{RGB}{0, 29, 145}
+\hypersetup{colorlinks = true,
+						linkcolor = index,
+						urlcolor  = index,
+						citecolor = index,
+						anchorcolor = blue,
+						pdftitle={Dispensa di Analisi Matematica 1},
+						bookmarks=true,
+						hyperindex = true,
+						linktoc=all}
+%----------------------%
+%---- indice analitico -----%
+\makeindex[intoc, columns=2, options= -s indice.ist]
+%----------------------%
+%---- nuovi comandi -----%
+\newtheorem{lem}{Definizione}
+\newtheorem{thm}{Teorema}
+\newtheorem{ass}{Assioma}[]
+
+\newcommand{\numberset}{\mathbb} 
+\newcommand{\N}{\numberset{N}} 
+\newcommand{\Z}{\numberset{Z}} 
+\newcommand{\Q}{\numberset{Q}} 
+\newcommand{\R}{\numberset{R}} 
+\newcommand{\C}{\numberset{C}}
+%----------------------%
+
+%---- Setting generale -----%
+\addbibresource{src/BIB.bib}
+\titleformat{\chapter}{\Huge\bf}{\thechapter}{20pt}{\Huge\bf}
+\indexsetup{othercode=\footnotesize}
+%----------------------%
+
+
+\begin{document}
+\pagenumbering{arabic}
+	\begin{titlepage}
+		\centering
+		\vspace*{\stretch{1}}
+		\begin{center}
+			\begin{tabular}{c}
+				\hline
+				\rule[-4mm]{0mm}{1.5cm}
+				\fontsize{22}{22}\textbf{Dispensa}\\
+				\rule[-6mm]{0mm}{1cm}
+				\fontsize{22}{22}\text{di}\\
+				\rule[-6mm]{0mm}{1cm}
+				\fontsize{22}{22}\textbf{Analisi Matematica I}\\
+				\hline
+			\end{tabular}
+		\end{center}
+		\vspace*{\stretch{1}}
+		\vspace{1cm}
+		\includegraphics[width=12cm]{src/Images/intro2.png}
+		\vspace*{\stretch{1}}
+
+		\vspace*{\stretch{2}}
+		{\large Luca Canessa\par}
+	\end{titlepage}
+	\begingroup
+	\makeatletter\let\ps@plain=\ps@empty
+	\tableofcontents
+	\endgroup
+	% ---------------------------------------------------------------------------- %
+	% 									Capitolo 1								   %
+	% ---------------------------------------------------------------------------- %
+		\input{src/Cap1}
+		\clearpage
+
+	% ---------------------------------------------------------------------------- %
+	% 									Capitolo 2      					 	   %
+	% ---------------------------------------------------------------------------- %
+		\input{src/Cap2}
+		\clearpage
+
+% ---------------------------------------------------------------------------- %
+% 									Capitolo 3							       %
+% ---------------------------------------------------------------------------- %
+		\input{src/Cap3}	
+		\clearpage
+
+% ---------------------------------------------------------------------------- %
+% 								Capitolo 4									   %
+% ---------------------------------------------------------------------------- %
+		\input{src/Cap4}		
+		\clearpage
+
+% ---------------------------------------------------------------------------- %
+% 								Capitolo 5  								   %
+% ---------------------------------------------------------------------------- %
+		\input{src/Cap5}			
+		\clearpage
+
+% ---------------------------------------------------------------------------- %
+% 									Capitolo 6	  						 	   %
+% ---------------------------------------------------------------------------- %
+		\input{src/Cap6}
+		\clearpage
+
+% ---------------------------------------------------------------------------- %
+% 									Capitolo 7	  						 	   %
+% ---------------------------------------------------------------------------- %
+		\input{src/Cap7}
+		\clearpage
+
+% ---------------------------------------------------------------------------- %
+% 									Capitolo 8	  						 	   %
+% ---------------------------------------------------------------------------- %
+\input{src/Cap8}
+\clearpage
+
+% ----------------------------------------------------------------------------- %
+% 																		APPENDICI																	%
+% ----------------------------------------------------------------------------- %
+	\appendix
+	\addappheadtotoc
+	\pagenumbering{roman}
+		\begin{titlepage}
+			\centering
+			\null
+			\vfill
+			\textbf{\Huge Appendice}
+			\vfill
+		\end{titlepage}
+
+		\fontsize{14}{20}
+		\chapter{}
+			\input{src/A}
+			\clearpage
+			
+		\chapter{}
+			\input{src/B}
+			\clearpage
+				
+		\chapter{}
+			\input{src/C}
+			\clearpage
+
+
+% ----------------------------------------------------------------------------- %
+% 																		INDICE																		%
+% ----------------------------------------------------------------------------- %
+	\printindex
+	\clearpage
+
+
+% ----------------------------------------------------------------------------- %
+% 																BIBLIOGRAFIA																	%
+% ----------------------------------------------------------------------------- %
+\nocite{*}
+\printbibliography
+\clearpage
+	
+% ----------------------------------------------------------------------------- %
+% 																PAGINA VUOTA																	%
+% ----------------------------------------------------------------------------- %
+	\clearpage
+	\null
+	\thispagestyle{empty}
+	\clearpage
+\end{document}

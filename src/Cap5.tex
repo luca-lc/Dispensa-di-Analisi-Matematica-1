@@ -1,0 +1,111 @@
+\chapter{Retta Reale}
+\thispagestyle{fancy}
+
+			\begin{lem}[Distanza]\index{Distanza tra punti}
+				Si chiama distanza tra due punti $x$ e $y$ il valore della differenza tra $x$ e $y$
+				$$d(x,y) = |x-y|$$
+			\end{lem}
+			
+			\medskip
+			
+			\begin{lem}[Intorno]\index{Intorno di un punto}
+				Sia $x_{0}$ un punto di $\R^{n}$, e sia r un numero positivo. Si chiama \emph{intorno di centro $x_{0}$ e raggio r} l'insieme $I(x_{0}, r)$ dei punti che distano da $x_{0}$ meno di $r$\footnotemark
+				$$I(x_{0}, r) = \{x \in \R^n \; | \; |x-x_{0}| < r\}$$
+			\end{lem}
+			
+			\footnotetext[1]{Gli intorni di $\R$ \`{e} l'intervallo aperto $]x_{0}-r, \; x_{0}+r[$}
+			
+			\section{Punti di \texorpdfstring{$\R$}{R}}
+				Dalle definizioni sopra si pu\`{o} studiare la topologia di $\R^{n}$ e dei suoi sottoinsiemi.
+				
+				Dati $E\subset\R^{n}$ e $x_{0}\in\R^{n}$
+				\index{Punto! interno}
+				\index{Punto! esterno}
+				\index{Punto! di frontiera}
+				\begin{itemize}
+					\item se $x_{0}$ \`{e} tutto circondato da punti di $E$ allora esiste un intorno di $x_{0}$ contenuto in $E$ e si dice che $x_{0}$ \`{e} \textbf{interno} ad $E$
+					
+					\item se vicino a $x_{0}$ non ci sono punti di $E$ allora esiste un intorno di $x_{0}$ in cui non cadono punti di $E$ e si dice che $x_{0}$ \`{e} un \textbf{punto esterno} a $E$
+					
+					\item se non accade nessuno dei casi precedenti allora in ogni intorno di $x_{0}$ ci sono punti di $E$ e del suo complementare $\overline{E}$ ($E^{c}$), in questo caso si dice che $x_{0}$ \`{e} \textbf{punto di frontiera}
+				\end{itemize}
+
+				\begin{lem}[Punto di Accumulazione]\index{Punto! di accumulazione}
+					Sia $E \subset \R^{n}$. Un punto $x_{0} \in \R^{n}$ si chiama \textbf{punto di accumulazione per E} se in ogni intorno di $x_{0}$ cadono infiniti punti di E 
+				\end{lem}
+				
+				Intuitivamente, quindi, un punto di accumulazione di $E$ \`{e} un punto interno al quale i punti di $E$ si addensano, in modo che in ogni suo intorno ce ne siano infiniti.\\	
+				\textbf{NOTA:} \`{E} evidente che per avere punti di accumulazione l'insieme deve essere costituito da un numero infinito di punti. Nel caso in cui l'insieme ha numero finito di punti, NON esistono punti di accumulazione in questo insieme.
+		
+			\section{Insiemi Aperti e Chiusi}
+				\begin{lem}[Insieme Aperto]\index{Insieme! aperto}
+					Un insieme $E \subset \R^{n}$ si dice \textbf{\emph{aperto}} se ogni suo punto \`{e} interno.
+					$$E^{i} = E$$
+				\end{lem}
+				Ricordando la definizione di intorno, \`{e} possibile anche dire che un insieme $E$ \`{e} aperto se per ogni $x_{0} \in E$ esiste un intorno $x_{0}$ tutto contenuto in $E$
+
+				\medskip
+
+				\begin{thm}[Insieme Aperto]
+					Un insieme $A$ \`{e} aperto se e solo se non contiene nessun punto di frontiera, cio\`{e} $A \cap \partial A = \emptyset$
+				\end{thm}
+			
+				\medskip			
+			
+				\begin{lem}[Insieme Chiuso]\index{Insieme! chiuso}
+					Diremo che un insieme D \`{e} chiuso se il suo complementare $D^{c}$ \`{e} aperto
+				\end{lem}
+			
+				\medskip
+					
+				\begin{thm}[Insieme Chiuso]
+					Un insieme D \`{e} chiuso se e solo se contiene tutti i suoi punti di frontiera, cio\`{e} $\partial D \subset D$.\\[2ex]
+					Un insieme D \`{e} chiuso se e solo se contiene tutti i suoi punti di accumulazione.
+				\end{thm}
+			
+	
+				\textbf{NOTA:} Non tutti gli insiemi sono aperti o chiusi, esistono infatti insiemi che non sono ne aperti ne chiusi. Ad esempio l'intervallo $[a,\;b[$, in quanto non \`{e} aperto perch\`{e} contiene un elemento di frontiera $a$ e non \`{e} chiuso perch\`{e} il suo complementare $]-\infty,\;a[ \;\cup\; [b,\;+\infty[$ non \`{e} aperto in quanto contiene $b$ che \`{e} elemento di frontiera.
+				
+				\medskip
+				
+				\begin{thm}[Chiusura]\index{Chiusura di un insieme}
+					La chiusura di $E$ \`{e} il pi\'{u} piccolo insieme chiuso che contiene E
+				\end{thm}
+			
+			\section{Teorema di Bolzano-Weierstrass}
+				\begin{thm}[Insieme Limitato Infinito]\index{Insieme! limitato infinito}
+					Un insieme $E \subset \R$ limitato e infinito ha almeno un punto di accumulazione
+				\end{thm}			
+				\begin{proof} 
+					Sia $a$ un minorante di $E$ e $b$ un maggiorante di $E$, si avr\`{a} $E \subseteq [a,\;b]$ e di conseguenza in questo intervallo cadranno infiniti punti di $E$. Andando a dividere questo intervallo a met\`{a} e prendendo sempre l'intervallo ottenuto avente infiniti punti di $E$, si ottiene una successione $I_{k}$ di intervalli dimezzati. Ricordandoci dell'assioma di continuit\`{a}, l'intersezione di questi (sotto)intervalli \`{e} costituita da solo punto $x_{0}$. Prendendo poi un qualsiasi intorno $I(x_{0},\; r)$ di $x_{0}$, sapremmo che l'intervalli $I_{k}$ cadr\`{a} dentro $I(x_{0},\;r)$, quando la usa ampiezza sar\`{a} minore di $r$, cio\`{e} quando $2^{k} > \frac{b-a}{r}$. Di conseguenza $I(x_{0},\;r)$ contiene infiniti punti di $E$, quindi $x_{0}$ sar\`{a} punto di accumulazione
+				\end{proof}
+				
+				\medskip
+				
+				\begin{thm}[Punto di Frontiera]\index{Punto! di frontiera}
+					Sia $E$ un sottoinsieme non vuoto di $\R$, e supponiamo che il suo complementare $E^{c}$ sia anch'esso non vuoto. Allora $E$ ha almeno un punto di frontiera.
+				\end{thm}
+		
+\section{Retta Reale Estesa}
+				\begin{lem}[Retta Reale Estesa]\index{Retta reale estesa}
+					Si chiama retta reale estesa l'unione della retta reale $\R$ e dell'insieme ${-\infty, +\infty}$. $$\R^{*} = R \cup \{+\infty, -\infty\}$$
+				\end{lem}
+
+				\begin{thm}[Estensione di $\R$]
+					Estendendo la definizione di estremo superiore ed estremo inferiore a sottoinsiemi di $\R^{*}$, si ha che per ogni $A\subseteq\R$ esistono $\sup(A)\in\R^{*}$ e $\inf(A)\in\R^{*}$. Se $A\subseteq\R$, allora
+					\begin{itemize}
+						\item $\sup(A) = +\infty \iff A \text{ non \`{e} superiormente limitato}$
+						\item $\inf(A) = -\infty \iff A \text{ non \`{e} inferiormente limitato}$
+						\item $\sup(\emptyset) = -\infty$ e $\inf(\emptyset) = +\infty$
+					\end{itemize}
+				\end{thm}
+
+				\begin{proof}
+					Essendo $A\ne\emptyset$. Se $+\infty\in A$ allora $+\infty=\sup(A)=\max(A)$.\\
+					Considerando il caso $A\subseteq\R$:
+					\begin{itemize}
+						\item $A$ superiormente limitato $\Rightarrow\exists\sup(A)\in\R\Rightarrow\exists\sup(A)\in\R^{*}$\\ A non \`{e} superiormente limitata $\iff\\ \{maggioranti\} = \{+\infty\} \iff \sup(A)=+\infty$
+						\item facendo le opportune modifiche, come sopra
+						\item $A=\emptyset\Rightarrow{maggioranti}=\R^{*}\Rightarrow\sup(\emptyset)=-\infty$ e $\inf(\emptyset)=+\infty$
+					\end{itemize}
+				\end{proof}

@@ -1,0 +1,76 @@
+\chapter{Taylor}
+\thispagestyle{fancy}
+	Un metodo per approssimare una funzione derivabile nel punto $x_{0}$ con un polinomio \`{e} dato dal polinomio
+	$$f(x) \cong f(x_{0})+f'(x_{0})(x-x_{0})$$
+	dove $\cong$ indica la differenza tra il primo ed il secondo membro del polinomio. Tale differenza \`{e} possibile scriverla come $R_{1}(x)$, che significa resto di valore $1$, e tender\`{a} a zero pi\`{u} rapidamente di $x-x_{0}$. Quindi riscrivendo il polinomio con la differenza si ottiene
+	$$f(x) = f(x_{0})+f'(x_{0})(x-x_{0}) + R_{1}(x)$$
+	dove
+	$$\lim_{x \to x_{0}}\frac{R_{1}(x)}{x-x_{0}}=0$$
+	Sapendo che una funzione si pu\`{o} derivare anche per gradi $n>1$, si cerca di capire se la funzione \`{e} scomponibile per polinomi di grado $n$ e resto $R_{n}(x)$.
+
+	\begin{lem}[Formula di Taylor]\index{Taylor}
+		Sia $f(x)$ una funzione derivabile $n$ volte in $x_{0}$, si ottiene
+		$$f(x) = \sum_{k=0}^{n}\frac{f^{k}(x_{0})}{k!}(x-x_{0})^{k} + R_{n}(x)$$
+		dove
+		$$\lim_{x \to x_{0}}\frac{R_{n}(x)}{(x-x_{0})^{n}}=0$$
+	\end{lem}
+	\begin{proof}
+		Supponendo che $f^{n}(x)$ sia continua in $x_{0}$ e sapendo $R_{n}(x)$ occorre dimostrare
+		$$\lim_{x \to x_{0}}\frac{f(x)-[f(x_{0})+f'(x_{0})(x-x_{0})+\dots+\frac{f^{n}(x_{0})(x-x_{0})^{n}}{n!}]}{(x-x_{0})^{n}}=0$$
+		Notando che il limite presenta la forma indeterminata ${0}\over{0}$ e per risolvere si utilizza il teorema di de l'H\^{o}pital. Dovendo derivare rispetto a $x$ si nota che la derivata di $f(x_{0})$ \`{e} $0$ mentre la derivata di ${f^{n}(x_{0})(x-x_{0})^{n}}\over{n!}$ \`{e}
+		$$\frac{f^{n}(x_{0})n(x-x_{0})^{n-1}}{n!} = \frac{f^{n}(x_{0})(x-x_{0})^{n-1}}{(n-1)!}$$
+		Risolvendo il limite con la funzione calcolata si ottiene nuovamente la forma indeterminata ${0}\over{0}$.
+		Applicando quindi $n$ volte il teorema di de l'H\^{o}pital, si ottiene il limite
+		$$\lim_{x\to x_{0}}\frac{f^{n}(x)-f^{n}(x_{0})}{n!}$$
+		Tale limite sar\`{a} $0$ in quanto la funzione in $x_{0}$ \`{e} continua.
+	\end{proof}
+
+	\medskip
+
+	\begin{thm}
+		Se esistono le derivate della funzione $f(x)$ nel punto $x_{0}$, allora vale che
+		$$f^{i}(x_{0})=0\begin{cases}
+			f^{i+1}(x_{0})>0 \Rightarrow \text{ minimo relativo in } x_{0}\\
+			f^{i+1}(x_{0})<0 \Rightarrow \text{ massimo relativo in } x_{0}\\
+			f^{i+1}(x_{0})=0 \Rightarrow f^{i+2}(x_{0})
+		\end{cases}\forall i \in [1, n]$$
+	\end{thm}
+
+	\section{Resto di Peano}
+		Considerando il polinomio $p(x)$ di grado $n$ a coefficienti reali
+		$$p(x)=a_{0}+a_{1}x+\dots+a_{n}x^{n}$$
+		sar\`{a} indefinitamente derivabile in $\R$ e le sue derivate di ordine maggiore di $n$ sono tutte nulle, inolte si pu\`{o} verificare che $p(0)=a_{0}$ e $p^{k}=k!a_{k}$ per ogni $k\le n$. Ricavando i valori dei vari $a_{k}$ possiamo riscrivere
+		$$p(x) = p(x_{0})+{{p'(0)}\over{1!}}x+\dots+{{p^{n}(0)}\over{n!}}x^{n}$$
+		Sostituendo $0$ con il punto $x_{0}\in\R$ si ottiene
+		$$p(x) = p(x_{0})+{{p'(x_{0})}\over{1!}}(x-x_{0})+\dots+{{p^{n}(x_{0})}\over{n!}}(x-x_{0})^{n}$$
+		Ne segue che un polinomio di grano $n$ \`{e} univocamente determinato se sono noti i valori che assumono le sue $n$ derivate in $x_{0}$. Cercando di determinare un polinomio $p_{n}(x)$ di grado minore o uguale a $n$ si ottiene che $p_{n}(x_{0})=f(x_{0})$ $p'_{n}(x_{0})=f'(x_{0})$ $p''_{n}(x_{0})=f''(x_{0})$ $p^{n}_{n}(x_{0})=f^{n}(x_{0})$ e quindi il polinomio risulter\`{a}
+		$$p(x) = f(x_{0})+{{f'(x_{0})}\over{1!}}(x-x_{0})+\dots+{{f^{n}(x_{0})}\over{n!}}(x-x_{0})^{n}$$
+		Tale polinomio prende il nome di \textbf{polinomio di Taylor}\index{Polinomio di Taylor} di ordine $n$ e centro della funzione $f(x)$ in $x_{0}$.
+
+		Si definisce funzione resto la funzione $R_{n}(x) = f(x)-p_{n}(x)$
+
+		\begin{thm}[Formula di Taylor con resto di Peano]\index{Taylor!con resto di Peano}
+			Se $f$ \`{e} derivabile $n$ volte in $x_{0}$ allora il resto $R_{n}(x)$ \`{e} infinitesimo in $x_{0}$ di ordine superiore a $(x-x_{0})^{n}$
+			$$\lim_{x \to x_{0}}\frac{R_{n}(x)}{(x-x_{0})^{n}}=0$$
+		\end{thm}
+		\begin{proof}
+			Dimostrazione uguale a quella data per la formula di Taylor ad inizio capitolo, tranne per la supposizione che la derivata $n$-esima sia continua in $x_{0}$. (Non si suppone che la derivata sia continua in $x_{0}$)
+		\end{proof}
+
+		\bigskip
+
+		\begin{lem}[o piccolo]\index{o piccolo}
+			Siano $f(x)$ e $g(x)$ funzioni definite in un intorno di $x_{0}$ (con eccezzione eventuale del punto stesso, non nulle per $x\ne x_{0}$. Si dice che $f(x)$ \`{e} per $x \to x_{0}$ un infinitesimo di ordine superiore a $g(x)$ o che $f(x)$ \`{e} o piccolo di $g(x)$ se $g(x)$ \`{e} una funzione infinitesima per $x \to x_{0}$ e $\lim_{x \to x_{0}}\frac{f(x)}{g(x)}=0$
+			$$f(x)=o(g(x)) \text{ per } x \to x_{0}$$
+		\end{lem}
+
+		Con tale definizione si pu\`{o} scrivere il resto di Peano come $R_{n}(x) = o((x-x_{0})^{n})$ e di conseguenza la formula di Taylor si pu\`{o} riscrivere anch'essa come
+		$$f(x) = \sum_{k=0}^{n}\frac{f^{k}(x_{0})}{k!}(x-x_{0})^{k} + o((x-x_{0})^{n})$$
+
+		Nel caso si utilizzi la formula di Taylor con centro $x_{0} = 0$ allora tale formula prende il nome di \emph{formula di Mac Laurin}\index{Mac Laurin}.
+
+	\section{Resto di Lagrange}
+		\begin{lem}[Formula di Taylor con resto di Lagrange]\index{Taylor! con resto di Lagrange}
+			Se $f$ \`{e} derivabile $n+1$ volte in $[a,b]$, con derivata $f^{(n+1)}$ continua allora per ogni $x \in [a,b]$ esiste un numero $x_{1}$ compreso tra $x_{0}$ ed $x_{1}$ tale che
+			$$R_{n}(x)=\frac{f^{(n+1)}(x_{1})}{(n+1)!}(x-x_{0})^{(n+1)}$$
+		\end{lem}

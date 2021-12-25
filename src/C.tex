@@ -1,0 +1,198 @@
+\section{Limiti}
+\thispagestyle{fancy}
+
+	\begin{tabular}{|c|c|}
+		\hline
+		\multicolumn{2}{|c|}{}\\
+		\multicolumn{2}{|c|}{\textbf{Regole Generali}}\\
+		\multicolumn{2}{|c|}{}\\
+		\hline
+		\hline
+		\rule[-4mm]{0mm}{1cm}
+		$\frac{a \neq 0}{0} = \pm\infty$ & $\frac{0}{a\neq 0} = 0$ \\
+		\hline
+		\rule[-4mm]{0mm}{1cm}
+		$\frac{\pm\infty}{0} = \pm\infty$ & $\frac{0}{\pm\infty} = 0$\\
+		\hline
+	\end{tabular}
+	\hfill
+	\begin{tabular}{|c|c|}
+		\hline
+		\multicolumn{2}{|c|}{}\\
+		\multicolumn{2}{|c|}{\textbf{Forme indeterminate}}\\
+		\multicolumn{2}{|c|}{}\\
+		\hline
+		\hline
+		\rule[-4mm]{0mm}{1cm}
+		$\frac{0}{0}$ & $\frac{\infty}{\infty}$\\
+		\hline
+		\rule[-4mm]{0mm}{1cm}
+		$0\cdot\infty$ & $1^{\infty}$\\
+		\hline
+		\rule[-4mm]{0mm}{1cm}
+		$0^{0}$ & $\infty^{0}$\\
+		\hline
+		\multicolumn{2}{|c|}{}\\
+		\multicolumn{2}{|c|}{$+\infty - \infty$}\\
+		\multicolumn{2}{|c|}{}\\
+		\hline
+	\end{tabular}
+
+	\bigskip
+
+	$$\lim_{x\to \pm \infty}k = k$$
+	\bigskip
+	$$\lim_{x\to\pm\infty}f(x) = \pm\infty$$
+	\bigskip
+	$$\lim_{x\to\infty}\left(1+\frac{1}{f(x)}\right)^{f(x)}=e$$
+	\bigskip
+	$$\lim_{x\to\infty}f(x)^{\frac{1}{f(x)}}=1$$
+	\bigskip
+	$$\lim_{x\to 0}\left(1+f(x)\right)^{\frac{1}{f(x)}} = e$$
+	\bigskip
+	$$\lim_{x\to 0}\frac{\ln(1+f(x))}{f(x)}=1$$
+	\bigskip
+	$$\lim_{x\to 0}\frac{\log_{a}(1+f(x))}{f(x)} = \log_{a}e \hspace{1cm} \forall a>0 \wedge a \ne 1$$
+	\bigskip
+	$$\lim_{x\to 0}\frac{e^{f(x)}-1}{f(x)}=1$$
+	\bigskip
+	$$\lim_{x\to 0}\frac{a^{f(x)}-1}{f(x)}=\ln(a) \hspace{1cm} \forall a>0$$
+	\bigskip
+	$$\lim_{x\to 0^{+}}f(x)^{a}\log_{b}f(x) = 0  \hspace{1cm} \forall a>0 \wedge b>1 $$
+	\bigskip
+	$$\lim_{x\to 0}\frac{1-\cos(f(x))}{f(x)^{2}}=\frac{1}{2}$$
+	\bigskip
+	$$\lim_{x\to 0}\frac{\sin(f(x))}{f(x)}=1$$
+	\bigskip
+	$$\lim_{x\to 0}\frac{\tan(f(x))}{f(x)}=1$$
+	\bigskip
+	$$\lim_{x\to 0}\frac{(1+x)^{a}-1}{x} = a$$
+
+
+\clearpage
+
+\section{Derivate}
+	\begin{center}
+		\begin{longtable}{|c|c|}
+			\hline
+			\rule[-4mm]{0mm}{1cm}
+			\textbf{Funzione} & \textbf{Derivata}\\
+			\hline
+			\hline
+			\rule[-6mm]{0mm}{1.4cm}
+			$k\in \R$ & $0$ \\
+			\hline
+			\rule[-6mm]{0mm}{1.4cm}
+			$k\cdot f(x)$ & $k\cdot f'(x)$ \\
+			\hline
+			\rule[-6mm]{0mm}{1.4cm}
+			$f(x)+g(x)$ & $f'(x)+g'(x)$ \\
+			\hline
+			\rule[-6mm]{0mm}{1.4cm}
+			$f(x)\cdot g(x)$ & $(f'(x)\cdot g(x)) + (f(x)\cdot g'(x))$ \\
+			\hline
+			\rule[-6mm]{0mm}{1.4cm}
+			$\frac{f(x)}{g(x)}$ & $\frac{f'(x)\cdot g(x))-(f(x)\cdot g'(x))}{g(x)^{2}}$ \\
+			\hline
+			\rule[-6mm]{0mm}{1.4cm}
+			$f(x)^{g(x)}$ & $f(x)^{g(x)}\cdot\left[g'(x)\ln(f(x))+\frac{g(x)f'(x)}{f(x)}\right]$ \\
+			\hline
+			\rule[-6mm]{0mm}{1.4cm}
+			$f(x)^{a}$ &  $a\cdot f(x)^{a-1}\cdot f'(x)$ \\
+			\hline
+			\rule[-6mm]{0mm}{1.4cm}
+			$\sqrt{f(x)}$ &  $\frac{f'(x)}{2\sqrt{f(x)}}$ \\
+			\hline
+			\rule[-6mm]{0mm}{1.4cm}
+			$e^{f(x)}$ &  $e^{f(x)}\cdot f'(x)$ \\
+			\hline
+			\rule[-6mm]{0mm}{1.4cm}
+			$a^{f(x)}$ &  $a^{f(x)}\cdot f'(x)\cdot \ln(a)$ \\
+			\hline
+			\rule[-6mm]{0mm}{1.4cm}
+			$\ln(f(x))$ &  $\frac{f'(x)}{f(x)}$ \\
+			\hline
+			\rule[-6mm]{0mm}{1.4cm}
+			$\log_{a}(f(x))$ &  $\frac{f'(x)}{f(x)\cdot \ln(a)}$ \\
+			\hline
+			\rule[-6mm]{0mm}{1.4cm}
+			$\sin((f(x))$ &  $cos(f(x)) \cdot f'(x)$ \\
+			\hline
+			\rule[-6mm]{0mm}{1.4cm}
+			$\cos(f(x))$ &  $-\sin(f(x)) \cdot f'(x)$ \\
+			\hline
+			\rule[-6mm]{0mm}{1.4cm}
+			$\tan(f(x))$ &  $\frac{f'(x)}{\cos^{2}(f(x))}$ \\
+			\hline
+			\rule[-6mm]{0mm}{1.4cm}
+			$\cot(f(x))$ &  $-\frac{f'(x)}{\sin^{2}(f(x))}$ \\
+			\hline
+			\rule[-6mm]{0mm}{1.4cm}
+			$\arcsin(f(x))$ &  $\frac{f'(x)}{\sqrt{1-f(x)^{2}}}$ \\
+			\hline
+			\rule[-6mm]{0mm}{1.4cm}
+			$\arccos(f(x))$ &  $-\frac{f'(x)}{\sqrt{1-f(x)^{2}}}$ \\
+			\hline
+			\rule[-6mm]{0mm}{1.4cm}
+			$\arctan(f(x))$ &  $\frac{f'(x)}{1+f(x)^{2}}$ \\
+			\hline
+		\end{longtable}
+	\end{center}
+
+\clearpage
+
+\section{Integrali}	
+	\begin{center}
+		\begin{longtable}{|c|c|}
+			\hline
+			\rule[-4mm]{0mm}{1cm}
+			\textbf{Integrale} & \textbf{Primitiva}\\
+			\hline
+			\hline
+			\rule[-6mm]{0mm}{1.4cm}
+			$\int k\cdot f(x)dx$ & $k \cdot \int f(x)dx$\\
+			\hline
+			\rule[-6mm]{0mm}{1.4cm}
+			$\int f(g(x))\cdot g'(x) dx$ & $F(g(x))+c$\\
+			\hline
+			\rule[-6mm]{0mm}{1.4cm}
+			$\int f(x)\pm g(x)dx$ & $\int f(x)dx \pm \int g(x)dx$\\
+			\hline
+			\rule[-6mm]{0mm}{1.4cm}
+			$\int [f(x)]^{n} \cdot f'(x) dx$ & $\frac{f(x)^{n+1}}{n+1}+c$\\
+			\hline
+			\rule[-6mm]{0mm}{1.4cm}
+			$\int \frac{f'(x)}{2\sqrt{f(x)}} dx$ & $\sqrt{f(x)}+c$\\
+			\hline
+			\rule[-6mm]{0mm}{1.4cm}
+			$\int \sin(f(x))\cdot f'(x) dx$ & $-\cos(f(x))+c$\\
+			\hline
+			\rule[-6mm]{0mm}{1.4cm}
+			$\int \cos(f(x))\cdot f'(x) dx$ & $\sin(f(x))+c$\\
+			\hline
+			\rule[-6mm]{0mm}{1.4cm}
+			$\int \frac{f'(x)}{\cos^{2}(f(x))} dx$ & $\tan(f(x))+c$\\
+			\hline
+			\rule[-6mm]{0mm}{1.4cm}
+			$\int \frac{f'(x)}{\sin^{2}(f(x))} dx$ & $-\cot(f(x))+c$\\
+			\hline
+			\rule[-6mm]{0mm}{1.4cm}
+			$\int \frac{f'(x)}{\sqrt{1-f(x)^2}} dx$ & $\arcsin(f(x))+c$\\
+			\hline
+			\rule[-6mm]{0mm}{1.4cm}
+			$\int \frac{f'(x)}{sqrt{1-f(x)^2}} dx$ & $-\arccos(f(x))+c$\\
+			\hline
+			\rule[-6mm]{0mm}{1.4cm}
+			$\int \frac{f'(x)}{1+f(x)^2} dx$ & $\arctan(f(x))+c$\\
+			\hline
+			\rule[-6mm]{0mm}{1.4cm}
+			$\int \frac{f'(x)}{f(x)} dx$ & $\ln|f(x)|+c$\\
+			\hline
+			\rule[-6mm]{0mm}{1.4cm}
+			$\int e^{f(x)} \cdot f'(x) dx$ & $e^{f(x)}+c$\\
+			\hline
+			\rule[-6mm]{0mm}{1.4cm}
+			$\int a^{f(x)} \cdot f'(x) dx$ & $\frac{a^{f(x)}}{\ln(a)}+c$\\
+			\hline
+		\end{longtable}
+	\end{center}

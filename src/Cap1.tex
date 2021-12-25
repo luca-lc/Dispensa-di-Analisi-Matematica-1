@@ -1,0 +1,104 @@
+\chapter{Insiemi}
+\thispagestyle{fancy}
+
+	Il concetto di insieme \`{e} un concetto primitivo, quindi, l'unica definizione possibile \`{e} la seguente:
+	
+	\begin{lem}[Insieme]\index{Insieme!}
+		Un insieme \emph{A} \`{e} una collezione di oggetti che prendono il nome di \emph{elementi di A}
+	\end{lem}
+	
+	Un metodo per rappresentare l'insieme \emph{A} \`{e} elencare gli elementi che lo compongono se questo \`{e} fattibile, altrimenti si descrive la sua caratteristica principale \emph{P(x)}. Ad esempio:
+	$$ A = \{ 1, 4\}$$
+	$$ B = \{ x \in A \mathrel{\Big|} P(x)\} $$
+	Mentre per descrivere l'appartenenza di un elemento nell'insieme \emph{A} si usano queste simbologie:
+	\[a \in A\] mentre la \textbf{NON} appartenenza si indica come
+	\[ a \notin A \footnotemark\]
+	Se, invece, l'insieme \emph{A} non contiene nessun elemento, si dice che l'insieme \`{e} vuoto e si indica 
+	\[C = \emptyset\]
+	e questo indica, anche, che nessun elemento dell'insieme soddisfa la propriet\`{a} \emph{P(x)}.
+
+	\footnotetext[1]{\textbf{Attenzione}$\colon$ $\medskip$ \emph{a} $\neq$ \{\emph{a}\}, il primo \`{e} un elemento di un insieme il secondo \`{e} un insieme con un solo elemento che \`{e} \emph{a}. Questo tipo di insiemi vengono detti \emph{singoletti} }
+
+	\bigskip
+
+	L'insieme che contiene tutti i numeri maggiori o uguali a 0 si chiama \emph{insieme dei numeri naturali} e si indica con $\N$. L'insieme $\N$ e i loro negativi si chiama \emph{insieme dei numeri interi relativi} e si indica con $\Z$. L'\emph{insieme dei numeri razionali} \`{e} quell'insieme composto da tutti i numeri che si scrivono come numeri fratti del tipo \[\frac{a}{b}\]  dove \emph{a} appartiene a $\Z$ e \emph{b} a $\Z\setminus\{0\}$ (escluso 0). L'insieme di tutti i numeri appartenenti agli insiemi precedenti e i numeri che non possono essere rappresentati come fratti viene chiamato \emph{insieme dei numeri reali} e si indica con $\R$.
+
+	\section{Sottoinsiemi}\index{Sottoinsieme}
+		\begin{lem}[Sottoinsieme e Sottoinsieme stretto]
+			Dati due insiemi \emph{A} e \emph{B}, diremo che \emph{A \`{e} contenuto in B} (o che \`{e} sottoinsieme) se ogni elemento di \emph{A} appartiene anche a \emph{B}, e si scrive
+			\[\emph{A} \subseteq \emph{B}\]
+			Dati due insiemi \emph{A} e \emph{B}, diremo che \emph{A \`{e} parzialmente contenuto in B} se esiste almeno un elemento di \emph{B} che non appartiene aa \emph{A}, e si scrive
+			\[\emph{A} \subset \emph{B}\]
+			Mentre un insieme \emph{A} si dice \emph{ non contenuto in B} (o non \`{e} sottoinsieme) se nessun elemento di \emph{A} appartiene anche a \emph{B}, e si scrive
+			\[\emph{A} \not\subseteq \emph{B} \]
+		\end{lem}
+		L'insieme vuoto $\emptyset$ \`{e} contenuto in \textbf{qualsiasi} insieme (e anche sottoinsieme).
+
+		\bigskip
+
+		\begin{lem}[Parti]\index{Parti}
+			Se $A$ \`{e} un insieme, chiameremo $\wp(A)$ l'insieme delle parti di $A$, ovvero l'insieme i cui elementi sono i sottoinsiemi di $A$.
+		\end{lem}
+
+		\begin{thm}[Cardinalit\`{a} delle parti]\index{Cardinalit\`{a} delle parti}
+			Un insieme $A$ con $n$ elementi ha $2^n$ sottoinsiemi.
+		\end{thm}
+
+		\begin{lem}[Cardinalit\`{a}]
+			Se $B$ \`{e} un insieme finito, chiameremo \emph{cardinalit\`{a} di B}, $\#B$, il numero degli elementi di $B$
+		\end{lem}
+
+
+	\section{Operazioni Insiemistiche}
+		\begin{lem}[Unione]\index{Unione}
+			Si chiama \textbf{\emph{unione}} di due insiemi \emph{A} e \emph{B}, l'insieme i cui elementi sono tutti e soli quelli appartenenti ad almeno uno dei due insiemi.
+			$$A \cup B$$
+		\end{lem}
+
+		Alcune propriet\`{a} dell'unione:
+		\begin{itemize}
+			\item $A \cup B = B \cup A$
+			\item $A \cup A = A $
+			\item $A \cup \emptyset = A$ 
+			\item $(A \cup B) \cup C = A \cup (B \cup C) = A \cup B \cup C $
+		\end{itemize}
+
+		\bigskip
+
+		\begin{lem}[Intersezione]\index{Intersezione}
+			Si chiama \textbf{\emph{intersezione}} di due insiemi \emph{A} e \emph{B} l'insieme costituito dagli elementi che appartengono sia ad \emph{A} che a \emph{B}.
+			$$A \cap B$$
+		\end{lem}
+
+		Alcune propriet\`{a} dell'intersezione:
+		\begin{itemize}
+			\item $A \cap B = B \cap A$
+			\item $A \cap A = A $
+			\item $A \cap \emptyset = \emptyset$ 
+			\item $(A \cap B) \cap C = A \cap (B \cap C) = A \cap B \cap C $
+		\end{itemize}
+
+		\bigskip
+
+		Due insiemi che \textbf{non} hanno elementi in comune vengono detti \textbf{\emph{disgiunti}} e la loro intersezione \`{e} \emph{vuota}
+
+		\bigskip
+
+		\begin{lem}[Differenza]\index{Differenza}
+			La differenza di due insiemi \emph{A} e \emph{B} \`{e} l'insieme costituito da tutti gli elementi di \emph{A} che non appartengono a \emph{B}
+			$$ A \backslash B \quad A - B $$
+		\end{lem}
+
+		Alcune propriet\`{a} della differenza:
+		\begin{itemize}
+			\item $A \cap B \Rightarrow A - B = A$
+			\item $A \subseteq B \Rightarrow A - B = \emptyset$
+		\end{itemize}
+
+		\begin{figure}[htp]
+			\centering
+			\includegraphics[width=.3\textwidth]{src/Images/Unione.png}\hfill
+			\includegraphics[width=.3\textwidth]{src/Images/Intersezione.png}\hfill
+			\includegraphics[width=.3\textwidth]{src/Images/Differenza.png}
+			\caption{$A \cup B$ $A \cap B$ $A-B$}
+		\end{figure}

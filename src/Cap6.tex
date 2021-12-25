@@ -1,0 +1,977 @@
+\chapter{Funzioni Reali}
+\thispagestyle{fancy}
+
+	Dare una definizione precisa di funzione \`{e} cosa complicata e assai lunga, quindi, si tende a dare una descrizione del tipo:
+
+	\begin{lem}[Funzione]\index{Funzione!}
+	Siano $A$ e $B$ due insiemi. Una funzione $f: A \rightarrow B$ \`{e} una legge che ad ogni elemento $x \in A$ fa corrispondere un elemento $y=f(x)$ di B
+	\end{lem}	
+
+	Gli insiemi sopra citati, $A$ e $B$ sono detti rispettivamente \emph{dominio} e \emph{codominio} della funzione $f$. Quando si parla di \emph{funzioni reali ad una variabile reale}, dominio e codominio sono sottoinsiemi di $\R$
+
+	\section{Immagine}
+		\begin{lem}[Immagine]\index{Immagine}
+		Si chiama immagine di $A$ (tramite $f$) l'insieme dei punti $y \in B$ che provengono da qualche punti di $A$. $$f(A) = \{y \in B \;|\; \exists\; x \in A, \;y=f(x)\}$$
+		\end{lem}
+		Si tratta quindi di un sottoinsieme del codominio della funzione $f$
+
+	\section{Immagine Inversa o Controimmagine}
+		\begin{lem}[Controimmagine]\index{Controimmagine}
+		Sia $f\colon A \rightarrow B$ una funzione e sia $D\subset B$. Si chiama immagine inversa o controimmagine di $D$ l'insieme dei punti $x \in A$ tali che $f(x) \in D$.
+		$$f^{-1}(D)=\{x\in A \;|\; f(x) \in D\}$$
+		\end{lem}
+
+	\section{Funzione Composta}
+		\begin{lem}[Composta]\index{Funzione! composta}
+		Siano $f \colon A \rightarrow B$ e $g \colon B \rightarrow C$ due funzioni. Si chiama funzione composta di $g$ e $f$ la funzione che ha come dominio $A$ e come codominio $C$, e che ad ogni $x \in A$ associa il punto $g(f(x))$
+		$$g \circ f(x) = g(f(x))$$
+		\end{lem}
+		\begin{figure}[htp]
+		\centering
+		\includegraphics[width=.3\textwidth]{src/Images/Composta.png}
+		\caption{$g\circ f$}
+		\end{figure}
+
+	\section{Iniettiva, Suriettiva, Biettiva}
+		\begin{lem}[Iniettiva]\index{Funzione! iniettiva}
+		Una funzione $f \colon A \rightarrow B$ si dice iniettiva se ogni elemento di $B$ \`{e} associato al pi\`{u} ad un solo elemento di $A$
+		$$f \mbox{ \`{e} iniettiva} \Leftrightarrow \forall x_{1},x_{2} \in A \; . \; f(x_{1}) = f({x_2}) \Rightarrow x_{1} = x_{2}$$
+		$$f \mbox{ \`{e} iniettiva} \Leftrightarrow \forall x_{1},x_{2} \in A \; . \; x_{1} \ne x_{2} \Rightarrow f(x_{1}) \ne f({x_2})$$
+		\end{lem} 
+
+		\medskip
+
+		\begin{lem}[Suriettiva]\index{Funzione! suriettiva}
+		Una funzione $f \colon A \rightarrow B$ si dice suriettiva se ogni elemento di $B$ \`{e} associato ad almeno un elemento di $A$.
+		$$f \mbox{ \`{e} suriettiva} \Leftrightarrow \forall b \in B,\; \exists a \in A \; | \; f(a) = b$$
+		\end{lem}
+
+		\medskip
+
+		\begin{lem}[Biettiva]\index{Funzione! biettiva}
+		Una funzione si dice biettiva o biunivoca se \`{e} sia iniettiva che suriettiva.
+		\end{lem}
+
+	\section{Monot\`{o}nia}
+		\begin{lem}[Crescenza e Decrescenza]\index{Crescenza}\index{Decrescenza}
+		Sia $A \subset \R$. Una funzione $f \colon A \rightarrow \R$ si dice crescente se per ogni $x_{1}, x_{2} \in A$ con $x_{1}<x_{2}$ si ha $f(x_{1}) \le f(x_{2})$. Se invece $f(x_{1}) < f(x_{2})$, la funzione si dice strettamente crescente.\\[1.5ex]
+		Analogamente, una funzione $f \colon A \rightarrow \R$ si dice decrescente se per ogni $x_{1}, x_{2} \in A$ con $x_{1}>x_{2}$ si ha $f(x_{1}) \ge f(x_{2})$. Se invece $f(x_{1}) > f(x_{2})$, la funzione si dice strettamente decrescente.
+		\end{lem}
+
+	\clearpage
+
+	\section{Grafici delle funzioni base}
+		\bigskip
+		\begin{figure}[htbp]
+			\centering
+			\includegraphics[width=.4\textwidth]{src/Images/Gretta.png}
+			\hfill
+			\includegraphics[width=.4\textwidth]{src/Images/Gquad.png}
+			\hfill
+			\includegraphics[width=.3\textheight]{src/Images/Gcube.png}
+			\caption{Grafici di funzioni: retta, esponente pari, esponente dispari}
+		\end{figure}
+
+		\begin{figure}[htbp]
+			\centering
+			\includegraphics[width=.4\textwidth]{src/Images/Radp.png}
+			\hfill
+			\includegraphics[width=.4\textwidth]{src/Images/Radd.png}
+			\caption{Grafici di radicali pari e dispari}
+		\end{figure}
+
+		\begin{figure}[htbp]
+			\centering
+			\includegraphics[width=.8\textwidth]{src/Images/Frac.png}
+			\hfill
+			\caption{Grafici di funzioni fratte con esponente pari (rosso) e dispari (blu)}
+		\end{figure}
+
+		\clearpage
+
+		Nelle funzioni trigonometriche, $\sin(x) \cos(x) \tan(x)$, la $x$ corrisponde alla misura dell'angolo misurato in radianti, che è pari alla lunghezza dell'arco $EC$ della circonferenza di raggio $AE=1$. Inoltre, sappiamo che la $\tan(x)$ \`{e} possibile ricavarla attraverso la funzione $\tan(x) = \frac{\sin(x)}{\cos(x)}$. Cosa da sottolineare \`{e} il fatto che $\sin(x)$ e $\cos(x)$ sono definiti per un qualsiasi valore di $x$, mentre $\tan(x)$ non \`{e} definita per valori uguali a $\frac{\pi}{2}+k\pi$. Inoltre, \`{e} bene notare che, sono funzioni periodiche, in particolare $\sin(x)$ e $\cos(x)$ ad intervalli di $2\pi$ mentre $\tan(x)$ a $\pi$.
+
+		\begin{figure}[htbp]
+			\centering
+			\includegraphics[width=.3\textwidth]{src/Images/Trig.png}
+			\caption{Circonferenza trigonometrica}
+		\end{figure}
+
+		\begin{figure}[htbp]
+			\centering
+			\includegraphics[width=.6\textwidth]{src/Images/GTrig.png}
+			\caption{Grafici di $\sin(x)$ (blu), $\cos(x)$ (rosso), $\tan(x)$ (verde)}
+		\end{figure}
+
+		\bigskip
+
+		\begin{figure}
+			\centering
+			\includegraphics[width=.8\textwidth]{src/Images/GExp.png}
+			\caption{Grafici di $a^{x}$ (rosso), $a^{-x}$ (verde)}
+		\end{figure}
+
+		\begin{figure}
+			\centering
+			\includegraphics[width=.8\textwidth]{src/Images/GLog.png}
+			\caption{Grafici di $\log_{a}(x)$ (rosso), $-\log_{a}(x)$ (verde)}
+		\end{figure}			
+
+		\begin{figure}
+			\centering
+			\includegraphics[width=.8\textwidth]{src/Images/GABS.png}
+			\caption{Grafico di $|x|$}
+		\end{figure}
+
+		\begin{figure}
+			\centering
+			\includegraphics[width=.8\textwidth]{src/Images/Gtrat.png}
+			\caption{Grafico di una funzione definita a tratti}
+		\end{figure}
+
+	\clearpage
+
+	\section{Restrizioni}
+		Ci sono funzioni per le quali prendere certi valori potrebbe portare ad errori o a situazioni che non possono evolversi, come ad esempio se volessimo invertire la funzione $x^{2}$. In questo caso non sarebbe possibile perch\'{e} tale funzione \`{e} suriettiva, ma restringendo il suo dominio (campo di esistenza) a $[0,\;+\infty[$ l'operazione diventa fattibile.
+
+		\begin{lem}[Restrizione]\index{Restrizione}
+			Sia $f$ una funzione di $A$ in $B$ ($f\colon A \rightarrow B$) e sia $D \subset A$. Chiameremo restrizione di $f$ a $D$ la funzione $f$ considerata solo nell'insieme $D$.
+			$$f_{D} \colon D \rightarrow B$$
+		\end{lem}
+
+		Tale concetto \`{e} utile anche nel caso in cui nella composizione di due funzioni, il codominio $B$ della prima, non coincida con il domino $E$ della seconda. Restringendo la funzione a dei valori di $x$ per i quali $f(x) \in E$, si scavalca l'inconveniente.
+
+	\section{Estremi Superiore ed Inferiore}
+		\subsection{\texorpdfstring{$\sup(f)$}{sup(f)}}
+			\begin{lem}[Limite Superiore]\index{Limite! superiore}
+				Diremo che una funzione $f\colon A \rightarrow \R$ \`{e} limitata superiormente in $A$ se la sua immagine $f(A)$ \`{e} limitata superiormente.
+			\end{lem}
+
+			\medskip
+
+			\begin{lem}[Estremo Superiore]\index{Estremo! superiore}
+				Sia $f$ una funzione limitata superiormente in un insieme $E$. Chiameremo estremo superiore della funzione $f$ in $E$ l'estremo superiore dell'insieme $f(E)$, cio\`{e} il minimo dei maggioranti
+				$$\sup(f)$$
+			\end{lem}
+		
+		\subsection{\texorpdfstring{$\inf(f)$}{inf(f)}}
+			\begin{lem}[Limite Inferiore]\index{Limite! inferiore}
+				Diremo che una funzione $f\colon A \rightarrow \R$ \`{e} limitata inferiormente in $A$ se la sua immagine $f(A)$ \`{e} limitata inferiormente.
+			\end{lem}
+
+			\medskip
+
+			\begin{lem}[Estremo Inferiore]\index{Estremo! inferiore}
+				Sia $f$ una funzione limitata inferiormente in un insieme $E$. Chiameremo estremo inferiore della funzione $f$ in $E$ l'estremo inferiore dell'insieme $f(E)$, cio\`{e} il maggiore dei minoranti
+				$$\inf(f)$$
+			\end{lem}
+	
+	\clearpage
+	
+	\section{Limiti di Funzione}
+		Per capire a grandi linee di cosa si tratta quando si parla di limiti, diamo un semplice esempio:\\
+		se presa una funzione $f(x)$ definita nel punto $x_{0}$, possiamo sapere cosa succede in $x_{0}$ e nei suoi punti limitrofi, supponendo che si mantengano simili a $f(x_{0})$.
+
+
+		L'operatore limite, permette di vedere cosa succede proprio in questi punti vicino a $x_{0}$; si scrive $\lim_{x\to x_{0}}f(x) = L$ e si dice che \emph{il limite \underline{tende} a $L$ quando $x$ \underline{tende} a $x_{0}$}. Pi\`{u} precisamente, ci\`{o} che \`{e} stato appena detto, significa che pi\`{u} $x$ \`{e} vicina a $x_{0}$, $f(x)$ si avvicina a $L$.
+
+		\begin{lem}[Limite]\index{Limite!}
+			Sia $f(x)$ una funzione definita in un insieme $D \subset \R$. e sia $x_{0}$ un punto di accumulazione di $D$, allora $$\lim_{x \to x_{0}}f(x)=L$$ se per ogni $\epsilon >0$ esiste un $\delta >0$ tale che per ogni $x \in D$ con $0<|x-x_{0}|<\delta$ si ha $|f(x)-L|<\epsilon$
+			$$\forall \epsilon > 0 \; \exists \delta > 0 \; | \; \forall x \in D \; . \; 0<|x-x_{0}|<\delta \Rightarrow |f(x)-L|<\epsilon$$
+		\end{lem}
+
+		\begin{figure}[htp]
+			\centering
+			\includegraphics[width=.3\textwidth]{src/Images/Lim.png}\hfill
+			\caption{Descrizione grafica del limite}
+		\end{figure}
+
+		Analizzando la definizione sopra, \`{e} necessario sottolineare che:
+		\begin{enumerate}
+			\item la $f(x)$ ovunque essa sia definita ($\R$, $D$), deve esistere per alemno un $x$ nell'intorno $\delta$ di $x_{0}$, cio\`{e} $x_{0}$ deve essere un punto di accumulazione
+			\item la disuguaglianza $0<|x-x_{0}|<\delta$ sottolinea il fatto che l'intorno di $x_{0}$ deve essere positivo e di lunghezza massima pari a $\delta$
+			\item la disugaglianza $|f(x)-L|<\epsilon$ ci dice quanto deve essere piccolo l'intorno di $f(x)$. Da notare che siccome l'intorno di $f(x)$ deve essere arbitrariamente piccolo, $\epsilon$ pu\`{o} assumere un qualsiasi valore, ci\`{o} implica che tale valore influenzer\`{a} anche la scelta del $\delta$. Pi\`{u} piccolo sar\`{a} $\epsilon$, pi\`{u} piccolo sar\`{a} anche $\delta$: $\forall \epsilon >0 \; \exists \delta > 0$
+		\end{enumerate}
+
+		\medskip
+
+		\begin{thm}[dei Carabinieri]\index{Teorema! dei Carabinieri}
+			Siano $f(x)$, $g(x)$ e $h(x)$ tre funzioni e supponiamo che risulti $f(x) \leq g(x) \leq h(x)$ in un intorno bucato $x_{0}$ e $$\lim_{x \to x_{0}}f(x) = \lim_{x \to x_{0}}h(x) = L$$ Allora anche $$\lim_{x \to x_{0}}g(x) = L$$
+		\end{thm}
+		
+		\begin{proof} 
+			Sia $\epsilon > 0$. Poich\'{e} $f(x) \to L$, eister\`{a} un $\delta_{1} > 0$ tale che per ogni $x$ con $0<|x-x_{0}|<\delta_{1}$ risulta $L-\epsilon < f(x) < L+\epsilon$, in particolare $f(x) > L-\epsilon$.\\
+			Analogamente, dato che $h(x) \to L$, eister\`{a} un $\delta_{2} > 0$ tale che per ogni $x$ con $0<|x-x_{0}|<\delta_{2}$ risulta $L-\epsilon < h(x) < L+\epsilon$, in particolare $h(x) > L-\epsilon$.\\
+			Infine esister\`{a} un $\delta_{3}$ tale che se $0<|x-x_{0}| < \delta_{3}$ si ha $f(x)\leq g(x) \leq h(x)$. Se si prende il $\delta$ pari al minore dei $\delta_{1}$, $\delta_{2}$, $\delta_{3}$, tutte le disuguaglianze varranno simultaneamente per ogni $x$ con $0<|x-x_{0}|<\delta$. Pertanto per questi $x$ si avr\`{a} $L-\epsilon < f(x) \leq g(x) \leq h(x) < L+\epsilon$, ergo, $L-\epsilon < g(x) < L+\epsilon$.
+		\end{proof}
+
+		\medskip
+
+		\begin{lem}[Limite tende a +infinito]
+			Sia $f(x)$ una funzione definita in un insieme $D \subset \R$. e sia $x_{0}$ un punto di accumulazione di $D$, allora $$\lim_{x \to x_{0}}f(x)=+\infty$$ se per ogni $M \in \R$ esiste un $\delta >0$ tale che per ogni $x \in D$ con $0<|x-x_{0}|<\delta$ si ha $f(x)>M$
+			$$\forall M \in \R^{+} \; \exists \delta > 0 \; | \; \forall x \in D \; . \; 0<|x-x_{0}|<\delta \Rightarrow f(x) > M$$
+		\end{lem}
+
+		\medskip
+
+		\begin{lem}[Limite tende a -infinito]
+			Sia $f(x)$ una funzione definita in un insieme $D \subset \R$. e sia $x_{0}$ un punto di accumulazione di $D$, allora $$\lim_{x \to x_{0}}f(x)=-\infty$$ se per ogni $K \in \R$ esiste un $\delta >0$ tale che per 	ogni $x \in D$ con $0<|x-x_{0}|<\delta$ si ha $f(x)<-K$
+			$$\forall K \in \R^{+} \; \exists \delta > 0 \; | \; \forall x \in D \; . \; 0<|x-x_{0}|<\delta \Rightarrow f(x) < -K$$
+		\end{lem}
+
+		\medskip
+
+		\begin{lem}[x tende a +infinito]
+			Sia $f(x)$ una funzione definita in un insieme $D$ non limitato superiormente, allora $$\lim_{x \to +\infty}f(x)=L$$ se per ogni $\epsilon > 0$ esiste un $v$ tale che per ogni $x \in D$ con $x > v$ si ha $|f(x)-L| < \epsilon$
+			$$\forall \epsilon > 0 \; \exists v \; | \; \forall x \in D \; . \; x > v \Rightarrow |f(x)-L|<\epsilon$$
+		\end{lem}
+
+		\medskip
+
+		\begin{lem}[x tende a -infinito]
+			Sia $f(x)$ una funzione definita in un insieme $D$ non limitato superiormente, allora $$\lim_{x \to -\infty}f(x)=L$$ se per ogni $\epsilon > 0$ esiste un $\mu$ tale che per ogni $x \in D$ con $x < \mu$ si ha $|f(x)-L| < \epsilon$
+			$$\forall \epsilon > 0 \; \exists \mu \; | \; \forall x \in D \; . \; x < \mu \Rightarrow |f(x)-L|<\epsilon$$
+		\end{lem}
+
+		\medskip
+
+		\begin{lem}[x tende a 0+]
+			Sia $f(x)$ una funzione definita in un insieme $D \subset \R$. e sia $x_{0}$ un punto di accumulazione di $D$, allora $$\lim_{x \to x_{0}^{+}}f(x)=L$$ se per ogni $\epsilon >0$ esiste un $\delta >0$ tale che per ogni $x \in D$ con $0<x-x_{0}<\delta$ si ha $|f(x)-L|<\epsilon$
+			$$\forall \epsilon > 0 \; \exists \delta > 0 \; | \; \forall x \in D \; . \; 0<x-x_{0}<\delta \Rightarrow |f(x)-L|<\epsilon$$
+		\end{lem}
+
+
+		\begin{lem}[Limite tende a 0-]
+			Sia $f(x)$ una funzione definita in un insieme $D \subset \R$. e sia $x_{0}$ un punto di accumulazione di $D$, allora $$\lim_{x \to x_{0}^{-}}f(x)=L$$ se per ogni $\epsilon >0$ esiste un $\delta >0$ tale che per ogni $x \in D$ con $-\delta<x-x_{0}<0$ si ha $|f(x)-L|<\epsilon$
+			$$\forall \epsilon > 0 \; \exists \delta > 0 \; | \; \forall x \in D \; . \; -\delta<x-x_{0}<0 \Rightarrow |f(x)-L|<\epsilon$$
+		\end{lem}
+
+		Le due definizioni sopra descrivono il limite destro e limite sinistro di una funzione. Tali limiti non sono altro che i limiti di una restrizione dell'insieme $D$ cos\`{i} descritti: $D\;\cap\;]x_{0}, +\infty[$ per quello destro, e $D\;\cap\;]-\infty, x_{0}[$ per quello sinistro.
+
+		\subsection{Asintoti}
+			\begin{lem}(Asintoto)\index{Asintoto}
+				Sia $f(x)$ una funzione definita in una semiretta $]x_{0}, +\infty[$, la retta di equazione $y= ax+b$ \`{e} asintoto  di $f$ per $x \to +\infty$ se
+				$$\lim_{x \to +\infty}[f(x)-ax-b] = 0$$\\[1.5ex]
+				Sia $f(x)$ una funzione definita in una semiretta $]-\infty,x_{0}[$, la retta di equazione $y= ax+b$ \`{e} asintoto  di $f$ per $x \to -\infty$ se
+				$$\lim_{x \to -\infty}[f(x)-ax-b] = 0$$
+			\end{lem}
+
+			Per capire meglio cosa sia un asintoto, immaginiamo una funzione $f(x)$. Un suo assintoto \`{e} quella retta alla quale la curva si avvicina sempre pi\`{u} si avvicina a $+\infty$, senza mai toccarlo. Abbiamo quindi tre tipi di asintoti:
+			
+			\begin{enumerate}
+				\item \textbf{VERTICALE}: \`{e} l'asintoto per il quale vale il limite \\$\lim_{x\to x_{0}}f(x) = \pm\infty$ ed \`{e} pari a $x_{0}$
+				\item \textbf{ORIZZONTALE}: \`{e} l' per il quale vale il limite \\$\lim_{x\to\pm\infty}f(x) = L$ ed \`{e} pari a $y=L$
+				\item \textbf{OBLIQUO}: \`{e} l'asintoto per il quale vale il limite \\$\lim_{x\to\pm\infty}\frac{f(x)}{x} = a$ e $\lim_{x\to\pm\infty}f(x) - ax = b$ ed \`{e} pari a $y=ax+b$
+			\end{enumerate}
+
+		\subsection{Continuit\`{a} e Discontinuit\`{a}}
+			\begin{lem}[Continuit\`{a}]\index{Continuit\`{a}}
+				Una funzione $f\colon A \rightarrow \R$ si dice continua in un punto $x_{0}\in A$ se $$\lim_{x\to x_{0}}f(x) = f(x_{0})$$ Si dice continua, se tale funzione \`{e} continua in tutto il suo insieme di definizione.
+			\end{lem}
+
+			Per poter utilizzare la definizione sopra, \`{e} necessario che la funzione ammetta il limite nel punto $x_{0}$ e che $x_{0}$ sia punto di accumulazione. Nel caso in cui $x_{0}$ \`{e} punto isolato, allora \`{e} necessario asserire che ogni funzione \`{e} continua dei suoi punti isolati
+
+			\medskip
+
+			Un punto di discontinuit\`{a} per una funzione $f$ \`{e} un punto in cui $f(x)$ non \`{e} continua. Tale discontinuit\`{a} pu\`{o} assumere diverse tipicit\`{a}:
+			
+			\begin{enumerate}
+				\item \textbf{salto}: la discontinuit\`{a} di questo tipo avviene quando limite destro e limite sinistro esistono ma sono diversi. 
+				$$\lim_{x\to x_{0}^{-}} \ne \lim_{x\to x_{0}^{+}}$$
+				\item \textbf{essenziale}: la discontinuit\`{a} di questo tipo avviene quando limite destro e limite sinistro esistono ma almeno uno dei due \`{e} infinito o non esiste
+				\[\lim_{x \to  x_{0}^{-}}f(x)\begin{cases} \not\exists \\ =\infty.\end{cases} \vee\ \lim_{x \to  x_{0}^{+}}f(x)\begin{cases} \not\exists\\ =\infty.\end{cases}\]
+				\item \textbf{eliminabile}: la discontinuit\`{a} di questo tipo avviene quando limite destro e limite sinistro esistono e sono uguali ma la funzione non \`{e} definita nel punto $x_{0}$ 
+				$$\lim_{x\to x_{0}^{-}} = \lim_{x\to x_{0}^{+}} \ne f(x_{0})$$
+			\end{enumerate}
+
+			\medskip
+
+			\begin{thm}[Permanenza del segno]\index{Teorema! permanenza del segno}
+				Sia $f(x)$ una funzione continua in un insieme $A$ e sia $x_{0}$ un punto di $A$. Se risulta $f(x_{0})>0$, allora esiste un intorno $I$ di $x_{0}$ tale che per ogni $x\in I\cap A$ si ha $f(x)<c$\\[1ex](oppure)\\[1ex]
+				Sia $f(x)$ una funzione definita in un intorno di $x_{0}$ e continua in $x_{0}$. Se $f(x_{0})>0$ allora esiste un numero $\delta >0$ con la propriet\`{a} che $f(x)>0$ per ogni $x\in\;]x_{0}-\delta, x_{0}+\delta$ 
+			\end{thm}
+
+			\medskip
+
+			\begin{thm}[Esistenza degli zeri]\index{Teorema! esistenza degli zeri}
+				Sia $f(x)$ una funzione continua in un intervallo $[a,b]$, e supponiamo che sia $f(a)<0$ e $f(b)>0$. Allora esiste un punto $x_{0} \in \; ]a,b[$ tale che $f(x_{0}) = 0$
+			\end{thm}
+
+			\begin{proof} 
+				Dividiamo l'intervallo $[a,b]$ in due parti uguali $c = \frac{a+b}{2}$. Se $f(c)>0$ poniamo $a_{1}=a$ e $b_{1} = c$, altrimenti $a_{1}=c$ e $b_{1} = b$. Ripetendo tale procedimento per $[a_{k}, b_{k}]$, otteniamo una successione di intervalli dimezzati, tali che $f(a_{k}) \leq 0$ e $f(b_{k}) > 0$. Per l'assioma di continuit\`{a}, esiste un solo punto $x_{0}$ contenuto in tutti gli intervalli, tale che $a_{k} \leq x_{0} \leq b_{k}$ per ogni $k$. Le successioni $a_{k}$ e $b_{k}$ tendono entrambe a $x_{0}$. Siccome $f$ \`{e} continua in $x_{0}$, per il teorema di continuit\`{a} delle successioni, si avr\`{a}: $$\lim_{k\to\infty}f(a_{k})=\lim_{k\to\infty}f(b_{k})=f(x_{0})$$
+				Per costruzione $f(a_{k})\leq 0$ e quindi $\lim_{k\to\infty}f(a_{k}) \leq 0$. Mentre per $f(b_{k})\geq 0$, si avr\`{a} $\lim_{k\to\infty}f(b_{k}) \geq 0$ e quindi $f(x_{0}) = 0$
+			\end{proof}
+
+			\medskip
+
+			\begin{thm}[$\inf$ e $\sup$]
+				Una funzione $f(x)$ continua in un intervallo $I$ assume tutti i valori compresi tra $\inf_{I}f$ e $\sup_{i}f$
+			\end{thm}
+
+			\begin{proof}
+				Sia $M$ l'estremo superiore e $m$ l'estremo inferiore della funzione $f$ nell'intervallo $I$, e sia $m<c<M$. Essendo $c$ maggiore di $m$ allora $c$ non potr\`{a} essere minorante ed esister\`{a} un punto $a\in I$ tale che $f(a) < c$. Essendo $c$ minore di $M$ allora $c$ non potr\`{a} essere maggiorante ed esister\`{a} un punto $b\in I$ tale che $f(b) > c$. La funzione continua $g(x)=f(x)-c$ sar\`{a} positiva in $b$ e negativa in $a$, per il teorema degli zeri ci sar\`{a} un punto $x_{0}$ compreso tra $a$ e $b$ in cui $g(x) = 0$ e quindi $f(x_{0}) = c$
+			\end{proof}
+
+			\medskip
+
+			\begin{lem}[Esistenza di un massimo]\index{Punto! di massimo}
+				Sia $f(x)$ una funzione definita in un insieme $A$, e sia $x_{0}$ un punto di $A$. Diremo che $x_{0}$ \`{e} un punto di massimo se risulta $f(x) \leq f(x_{0})$ per ogni punto $x \in A$. In corrispondenza, il valore $f(x_{0})$ si dice valore massimo, o massimo, della funzione $f(x)$.
+			\end{lem}
+
+			\begin{thm}[Weierstrass]\index{Teorema! di Weierstrass}
+				Una funzione continua in un insieme $E$ compatto ha massimo e minimo
+			\end{thm}
+
+			\begin{thm}[Continuit\`{a} funzione composta]\index{Continuit\`{a} funzione composta}
+				Siano $X$ e $Y$ due intervalli aperti di $\R$. Sia $f\colon X\subset\R\rightarrow\R$ continua in $x_{0}\in X$ con $Im(f)\subseteq Y$ e $g\colon Y\subset\R\rightarrow\R$ continua in $f(x_{0})\in Y$. Allora $g\circ f$ \`{e} continua in $x_{0}\in X$
+			\end{thm}
+			
+			\begin{proof}
+				Sia $x_{0}$ un punto del dominio della funzione composta $h(x)=g(f(x))$. 
+				Chiamando $y_{0}=f(x_{0})$ l'immagine del punto $x_{0}$ mediante la funzione $f$, allora, $h(x_{0}) = g(f(x_{0}))=g(y_{0})$. 
+				Poich\'{e} la funzione $g$ \`{e} continua per ipotesi nel punto $y_{0}$, per ogni $\epsilon > 0 \exists \gamma >0$ tale che $|y-y_{0}|<\epsilon$ allora risulter\`{a} $|g(y)-g(y_{0})|<\gamma$. 
+				Per ipotesi, $f$ \`{e} continua in $x_{0}$, per un qualsiasi valore $\bar{\epsilon}$ esister\`{a} un $\bar{\delta}$ tale che $|x-x_{0}|<\bar{\epsilon}$ e quindi $|f(x)-f(x_{0})|<\bar{\delta}$. 
+				Dato che ci\`{o} vale per ogni $\bar\epsilon$ allora varr\`{a} anche per $\epsilon$, ma allora, $|f(x)-f(x_{0})|<\epsilon$. Da ci\`{o} $|h(x)-h(x_{0})|=|g(f(x))-g(f(x_{0}))|=|g(y)-g(y_{0}))|$. Poich\'{e} $|x-x_{0}|<\bar{\epsilon} \Rightarrow |y-y_{0}|<\epsilon$ e quindi $|g(y)-g(y_{0})|<\gamma$
+			\end{proof}
+
+			\begin{thm}[Teorema di Sostituzione]\index{Teorema! di Sostituzione}
+				Supponiamo $\lim_{x \to x_{0}}f(x) = l$ e sia $g$ una funzione definita in un intorno bucato di $l$. Supponiamo che:
+				\begin{itemize}
+					\item esista $\lim_{y \to l}g(y)$ (finito o infinito)
+					\item g sia continua in $l$ oppure esista un intorno $I(x_{0})$ tale che $f(x) \ne l, \forall x \in I^{*}(x_{0})$
+				\end{itemize}
+				Allora
+				$$\lim_{x \to x_{0}}g(f(x)) = \lim_{y \to l}g(y)$$
+			\end{thm}
+			
+			\subsection{Limiti Notevoli}\index{Limiti Notevoli}
+				$$\boxed{\lim_{x\to 0}\frac{(1+x)^{a}-1}{x} = a}$$
+				$$a\in\R$$
+				\begin{proof}
+					Poich\'{e} $x$ tende a $0$ possiamo supporre che $1+x>0$ quindi segue che $(1+x)^{a} = e^{a\ln(1+x)}$ e quindi
+					$$\lim_{x\to 0}\frac{(1+x)^{a}-1}{x} = a \lim_{x\to 0}\frac{e^{a\ln(1+x)}-a}{a\ln(1+x)}\cdot\frac{\ln(1+x)}{x}$$
+					Se $x\to 0$ allora $a\ln(1+x)\to 0$ e quindi 
+					$$\lim_{x\to 0}\frac{(1+x)^{a}-1}{x} = a$$
+				\end{proof}
+
+				\bigskip
+
+				$$\boxed{\lim_{x\to 0}\frac{\sin(x)}{x}=1}$$
+				\begin{proof}
+					Dato che $\frac{\sin(x)}{x}$ \`{e} una funzione pari, \`{e} possibile tenere in considerazione solo il caso $x>0$ e si pu\`{o} supporre che $x<\frac{\pi}{2}$. Perci\`{o} si avr\`{a}
+					$$0 < \sin(x) \le x \le \tan(x)$$
+					Considerando i reciproci si ottiene
+					$$\frac{1}{\sin(x)} \ge \frac{1}{x} \ge \frac{\cos(x)}{\sin(x)}$$
+					Moltiplicando tutto per $\sin(x)$ otteniamo
+					$$1 \ge \frac{\sin(x)}{x} \ge \cos(x)$$
+					Dato che $\cos(x)$ tende a $1$ quando $x \to 0$ per il teorema dei Carabinieri la funzione di mezzo tende allo stesso valore delle altre due
+				\end{proof}
+
+				\bigskip
+
+				$$\boxed{\lim_{x \to 0}\frac{1-cos(x)}{x} = 0}$$
+				\begin{proof}
+					Sapendo che $\sin^{2}(x) + \cos^{2}(x) = 1 \Rightarrow 1-\cos^{2}(x) = \sin^{2}(x)$ quindi
+					$$\lim_{x\to 0}{\frac {\sin ^{2}(x)}{x^{2}}}{\frac{x}{1+\cos(x)}}=\lim _{x\to 0}\left({\frac  {\sin(x)}{x}}\right)^{2}{\frac  {x}{1+\cos(x)}}$$
+					Dato che il primo termine tende a $1$ e il secondo a $0$ si ottiene
+					$$\lim_{x\to 0}\left({\frac{\sin(x)}{x}}\right)^{2}{\frac{x}{1+\cos(x)}}=0$$
+					Quindi 
+					$$\lim_{x \to 0}\frac{1-cos(x)}{x} = 0$$
+				\end{proof}
+
+				\bigskip
+
+				$$\boxed{\lim_{x \to 0}\frac{1-\cos(x)}{x^{2}}=\frac{1}{2}}$$
+				\begin{proof}
+					Moltiplicando e dividendo per $1+\cos(x)$ si ottiene
+					$${\frac{(1-\cos(x))(1+\cos(x))}{x^{2}(1+\cos(x))}}={\frac{1-\cos ^{2}(x)}{x^{2}(1+\cos(x))}}$$
+					Dato che $\sin^{2}(x)=1-\cos^{2}(x)$
+					$${\frac{\sin ^{2}(x)}{x^{2}(1+\cos(x))}}={\frac{\sin ^{2}(x)}{x^{2}}}\cdot {\frac{1}{1+\cos(x)}}=\left({\frac{\sin(x)}{x}}\right)^{2}\cdot{\frac{1}{1+\cos(x)}}$$
+					Quindi
+					$$\lim_{x\to 0}{\frac{1-\cos(x)}{x^{2}}}=\lim_{x\to 0}\left({\frac{\sin(x)}{x}}\right)^{2}{\frac{1}{1+\cos(x)}}=\left(\lim _{x\to 0}{\frac{\sin(x)}{x}}\right)^{2}\lim_{x\to 0}{\frac{1}{1+\cos(x)}}={\frac{1}{2}}$$
+				\end{proof}
+
+				\bigskip
+
+				$$\boxed{\lim_{x\to 0}\frac {e^{x}-1}{x}=1}$$
+				\begin{proof}
+					Si ponga $z=e^{x}-1$ ottenendo $x=\ln(1+x)$. In pi\`{u} se $x \to 0$. $z \to 0$ e Quindi
+					$$\lim_{x\to 0}{\frac{e^{x}-1}{x}}=\lim_{z\to 0}{\frac{z}{\ln(1+z)}}=\lim_{z\to 0}{\frac{1}{\frac {\ln(1+z)}{z}}}$$
+					Sapendo che $\lim_{x\to 0}{\frac {\ln(1+x)}{x}}=1$ otteniamo
+					$$\lim_{x\to 0}{\frac{e^{x}-1}{x}}=\lim_{z\to 0}{\frac{1}{1}=1}$$
+				\end{proof}
+
+	\clearpage
+
+	\section{Derivate}
+		La derivata \`{e} un concetto scoperto relativamente alla ricerca della tangente di una curva, difatti, per dare una spiegazione al significato di derivata si usa la seguente descrizione:
+		supponendo di avere una curva $y=f(x)$, prendiamo la retta secante di coordinate $(x_{0}, y_{0})$ e $x_{1},y_{1}$. L'equazione di tale retta sar\`{a} dunque $$y=y_{0}+\frac{y_{1}-y_{0}}{x_{1}-x_{0}}\cdot (x-x_{0})$$ essendo $y_{0}=f(x_{0})$ e $y_{1}=f(x_{1})$ si otterr\`{a} $$y=f(x_{0})+\frac{f(x_{1})-f(x_{0})}{x_{1}-x_{0}}\cdot (x-x_{0})$$
+		Facendo tendere il punto $x_{1}$ a $x_{0}$ la retta secante tender\`{a} a diventare tangente e il suo coefficiente angolare tender\`{a} a $$f'(x_{0}) = \lim_{x\to x_{0}}\frac{f(x)-f(x_{0})}{x-x_{0}}$$ Ponendo $x=x_{0}+h$, $x-x_{0} = h$ tender\`{a} a $0$ ottenendo quindi $$f'(x_{0}) = \lim_{h\to 0}\frac{f(x_{0}+h)-f(x_{0})}{h}$$
+		Tale limite viene detto, appunto, derivata della funzione $f$ nel punto $x_{0}$ e i modi per indicarlo sono: $f'(x_{0})$, $Df(x_{0})$, $\frac{df(x_{0})}{dx}$.
+		Ovviamente tale definizione di derivata \`{e} una definizione geometrica, infatti, la retta tangente alla curva $f(x)$ \`{e} pari a $y = f(x_{0})+f'(x_{0})(x-x_{0})$. Se prendiamo l'equazione di una retta $y=mx+q$, possiamo notare che $m=\tan(\alpha)$ dove $\alpha$ \`{e} l'angolo che la retta forma con l'asse delle ascisse. Essendo anche $m=f'(x_{0})$, allora si evince che $\tan(\alpha) = f'(x_{0})$. Continuando questo ragionamento possiamo vedere che, pi\`{u} grande sar\`{a} la derivata, pi\`{u} l'angolo $\alpha$ si avviciner\`{a} a $\frac{\pi}{2}$ e quindi maggiore sar\`{a} la pendenza della curva. Al contrario, pi\`{u} la derivata \`{e} piccola, pi\`{u} l'angolo tende a $0$ e quindi la curva sar\`{a} costante o quasi. 
+
+		\smallskip
+
+		\begin{lem}[Funzione Derivabile]\index{Funzione! Derivabile}
+			Sia $f$ una funzione definita in un intervallo $]a,b[$ e sia $x$ un punto di questo intervallo. Diremo che $f$ \`{e} derivabile in x se esiste finito il limite $$f'(x) = \lim_{h\to 0}\frac{f(x+h)-f(x)}{h}$$
+			e tale limite se esiste si chiama derivata della funzione $f$ nel punto $x$
+		\end{lem}
+
+		\bigskip
+
+		\begin{thm}[Derivabile e continua]
+			Se una funzione $f$ \`{e} derivabile in un punto $x_{0}$ allora \`{e} continua in $x_{0}$
+		\end{thm}
+		
+		\begin{proof} 
+			Quando $x$ tende a $x_{0}$, $f(x)$ tende a $f(x_{0})$, quindi $f(x) - f(x_{0}) = 0$. Se $x\ne x_{0}$ possiamo scrivere $f(x)-f(x_{0}) = \frac{f(x)-f(x_{0})}{x-x_{0}}(x-x_{0})$. Quando $x\to x_{0}$, $\frac{f(x)-f(x_{0})}{x-x_{0}}$ tende a $f'(x_{0})$ mentre $(x-x_{0})$ tende a $0$. Di conseguenza $f(x)$ tender\`{a} a $f(x_{0})$, cos\`{i} la funzione $f$ sar\`{a} continua in $x_{0}$
+		\end{proof}
+
+		\subsection{Massimi e Minimi}
+			Con il teorema di Weierstrass, siamo venuti a conoscenza che una funzione $f$ in un intervallo chiuso e limitato ha massimo e/o minimo, ma tale teorema non ci da la possibilit\`{a} di trovare tali punti. A questo scopo ci viene in aiuto il concetto di derivata. perch\'{e} esista massimo e/o minimo, una funzione $f$, deve avere la tangente con equazione $y=c$. Sapendo che la derivata in un punto \`{e} la tangente del grafico in quel punto e sapendo che l'equazione della tangente \`{e} $y=f(x_{0})+f'(x_{0})(x-x_{0})$, significa che per avere tangente pari a una costante, la derivata dovr\`{a} essere nulla. Quindi, se nel punto $x_{0}$ la derivata si annulla, significa che la tangente \`{e} parallela all'asse delle ascisse e che quindi abbiamo massimo o minimo in quel punto.
+
+			\begin{lem}[Massimo]\index{Massimo}
+				Sia $f(x)$ una funzione definita in un insieme $A\subset\R$. Un punto $x_{0}\in A$ si dir\`{a} di massimo relativo (o locale) se esiste un intorno $I$ di $x_{0}$ tale che per ogni $x\in I\cap A$ si abbia $$f(x)\le f(x_{0})$$
+				Se tale disuguaglianza \`{e} verificata per ogni $x\in A$, allora $x_{0}$ si dice punto di massimo assoluto in $A$
+			\end{lem}
+
+			\begin{lem}[Minimo]\index{Minimo}
+				Sia $f(x)$ una funzione definita in un insieme $A\subset\R$. Un punto $x_{0}\in A$ si dir\`{a} di minimo relativo (o locale) se esiste un intorno $J$ di $x_{0}$ tale che per ogni $x\in J\cap A$ si abbia $$f(x)\ge f(x_{0})$$
+			Se tale disuguaglianza \`{e} verificata per ogni $x\in A$, allora $x_{0}$ si dice punto di minimo assoluto in $A$
+			\end{lem}
+
+			\bigskip
+
+			\begin{thm}[Teorema di Fermat (punti stazionari)]\index{Teorema! di Fermat}\ index{Teorema! punti stazionari}
+				Sia $f(x)$ una funzione definita in un insieme $A\subset\R$, e sia $x_{0}$ un punto di massimo o di minimo relativo interno ad $A$. Se $f$ \`{e} derivabile in $x_{0}$, risulta $f'(x_{0}) = 0$.
+			\end{thm}
+			
+			\begin{proof} 
+				Siccome $x_{0}$ \`{e} punto di massimo interno ad $A$, allora esiste un intorno $I(x_{0}, e)$ tutto contenuto in A, tale che per ogni $x\in A$ risulta $f(x)\le f(x_{0})$.
+				Considerando un $|h|<r$, avremmo che il rapporto incrementale relativo al punto $x_{0}$ \`{e} $$\frac{f(x_{0}+h)-f(x_{0})}{h}$$ Poich\'{e} $|h|<r$ il punto $x_{0}+h$ \`{e} contento in $I(x_{0},r)$ e dunque $f(x_{0}+h)\le f(x_{0})$. In questo modo il numeratore del rapporto incrementale \`{e} sempre minore o uguale a $0$ e quindi sar\`{a} positivo per $h<0$ e negativo per $h>0$. Siccome $f$ \`{e} derivabile per ipotesi in $x_{0}$, esisteranno i limiti destro e sinistro del rapporto incrementale, che saranno uguali alla derivata $f'(x_{0})$. Per il teorema della permanenza del segno 
+				$$f'(x_{0}) = \lim_{x\to x_{0}}\frac{f(x_{0}+h)-f(x_{0})}{h}\le 0$$ $$f'(x_{0}) = \lim_{x\to x_{0}}\frac{f(x_{0}+h)-f(x_{0})}{h}\ge 0$$
+				quindi, la derivata dovr\`{a} essere contemporaneamente $\le 0$ e $\ge 0$, ma questo \`{e} possibile se e solo se $f'(x_{0}) = 0$.\\
+				Similmente, con opportune modifiche, si pu\`{o} dimostrare per un punto di minimo.
+			\end{proof}
+
+
+		\subsection{Rolle, Lagrange, Cauchy, de l'H\^{o}pital}
+			\begin{thm}[Rolle]\index{Teorema! di Rolle}
+				Sia $f(x)$ una funzione continua in un intervallo chiuso $[a,b]$, derivabile in $]a,b[$, e tale che $f(a)=f(b)$. Allora esiste un punto compreso tra $a$ e $b$ in cui la derivata si annulla.
+			\end{thm}
+			
+			\begin{proof} 
+				Per il teorema di Weierstrass, la funzione $f$ ha massimo e minimo in $[a,b]$. Chiamiamo $x_{M}$ il punto di massimo e $x_{m}$ il punto di minimo. Due possibili casi sono:
+				\begin{enumerate}
+					\item Sia $x_{M}$ che $x_{m}$ cadono agli estremi dell'intervallo $[a,b]$. Poich\'{e} la funzione assume stesso valore nei due punti, massimo e minimo coincidono, quindi $f$ sar\`{a} costante, dunque la derivata nulla in tutto l'intervallo.
+					\item Almeno uno dei due punti $x_{m}$ $x_{M}$ cade all'interno di $[a,b]$. Per definizione di massimo (minimo) relativo, la derivata in questo punto sar\`{a} $0$.
+				\end{enumerate}	
+				In ogni caso, la derivata si annulla in almeno un punto interno.
+			\end{proof}
+
+			\medskip
+
+			\begin{thm}[Lagrange o valor medio]\index{Teorema! di Lagrange}
+				Sia $f(x)$ una funzione continua in un intervallo chiuso $[a,b]$, e derivabile in $]a,b[$. Esiste un punto $\xi\in]a,b[$ tale che $f(b)-f(a)=f'(\xi)(b-a) \rightarrow f'(\xi)=\frac{f(b)-f(a)}{(b-a)}$.
+			\end{thm}
+			
+			\begin{proof} 
+				Consideriamo la funzione $\psi(x)=f(x)-f(a)-\frac{f(b)-f(a)}{b-a}(x-a)$. Essendo continua in $[a,b]$ perch\'{e} combinazione lineare di funzioni continue in $[a,b]$, derivabile in $]a,b[$ perch\'{e} combinazione lineare di funzioni derivabili in $]a,b[$ ed essendo $$\psi(a)=f(a)-f(a)-\frac{f(b)-f(a)}{b-a}(a-a)$$
+				$$\psi(b)=f(b)-f(a)-\frac{f(b)-f(a)}{b-a}(b-a)$$
+				quindi $\psi(a)=\psi(b)$. Soddisfando $\psi$ le ipotesi del teorema di Rolle, per cui esiste un punto $\xi\in]a,b[$ tale che $\psi'(\xi)=0$, si ottiene $f(b)-f(a)=f'(\xi)(b-a)=0$
+			\end{proof}
+		
+			Questo teorema ha un senso geometrico che possiamo descrivere in questo modo:\\
+			esiste un punto $\xi\in]a,b[$ tale che la tangente alla curva passante per $(\xi,f(\xi))$, ha stesso coefficiente angolare della retta secante passante per i punti $(a,f(a))$ $(b,f(b))$
+		
+			\begin{figure}[htp]
+				\centering
+				\includegraphics[width=.8\textwidth]{src/Images/Lagrange.png}
+				\caption{Significato geometrico del valor medio}
+			\end{figure}
+
+			\medskip
+
+			\begin{thm}[Cauchy]\index{Teorema! di Cauchy}
+				Siano $f(x)$ e $g(x)$ due funzioni continue in $[a,b]$, derivabili in $]a,b[$. Esiste un punto $\xi\in]a,b[$ tale che $[g(b)-g(a)]f'(\xi)=[f(b)-f(a)]g'(\xi) \rightarrow \frac{f'(\xi)}{g'(\xi)}=\frac{f(b)-f(a)}{g(b)-g(a)}$
+			\end{thm}
+			
+			\begin{proof} 
+				Consideriamo la funzione $h(x)=[g(b)-g(a)]f(x)-[f(b)-f(a)]g(x)$. Essendo continua in $[a,b]$ e derivabile in $]a,b[$ e $$h(a)=[g(b)-g(a)]f(a)-[f(b)-f(a)]g(a)=g(b)f(a)-f(b)g(a)$$
+				$$h(b)=[g(b)-g(a)]f(b)-[f(b)-f(a)]g(b)=-g(a)f(b)+f(a)g(b)$$
+				quindi sar\`{a} $h(a)=h(b)$. Soddisfacendo $h$ le ipotesi del teorema di Rolle, per cui esiste un punto $\xi\in]a,b[$ tale che $h'(\xi)=0$, si ottiene $[g(b)-g(a)]f'(\xi)=[f(b)-f(a)]g'(\xi)=0$
+			\end{proof}
+		
+			Questo teorema \`{e} una generalizzazione del teorema di Lagrange.
+
+			\bigskip
+
+			\begin{thm}[de l'H\^{o}pital 1]\index{Teorema! di de l'H\^{o}pital}
+				Siano $f(x)$ e $g(x)$ due funzioni continue in un intervallo $[a,b]$ e derivabili in $]a,b[$ con la possibile eccezione di un punto $x_{0}$. Supponiamo che $f(x_{0}) = g(x_{0}) = 0$ e che $g(x)$ e $g'(x)$ non si annullino mai per $x\ne x_{0}$. Supponiamo anche che esista il limite del rapporto delle derivate $$\lim_{x\to x_{0}}\frac{f'(x)}{g'(x)} = L$$ Allora esiste anche il limite del rapporto delle funzioni ed \`{e} uguale al precedente $$\lim_{x\to x_{0}}\frac{f(x)}{g(x)} = L$$
+			\end{thm}
+			
+			\begin{proof} 
+				Sia $x$ un punto di $]a,b[$. Per il teorema di Cauchy esiste un punto tra $x_{0}$ e $x$, dipendente da $x$, tale che $$\frac{f(x)}{g(x)}=\frac{f(x)-f(x_{0})}{g(x)-g(x_{0})}=\frac{f'(\xi)}{g'(\xi)}$$
+				Quando $x\to x_{0}$ il punto $\xi$, che \`{e} compreso tra $x_{0}$ e $x$, tende a $x_{0}$, e dunque $$\lim_{x\to x_{0}}\frac{f(x)}{g(x)}=\lim_{x\to x_{0}}\frac{f'(\xi)}{g'(\xi)}=L$$
+			\end{proof}
+
+			\medskip
+
+			\begin{thm}[de l'H\^{o}pital 2]
+				Siano $f(x)$ e $g(x)$ due funzioni derivabili in $[a,b]-\left\{x_{0}\right\}$.Supponiamo che per $x\to x_{0}$ $f(x)$ e $g(x)$ tendano entrambe a $+\infty$ e che $g'(x)$ non si annulli mai per un intorno di $x_{0}$. Supponiamo anche che esista il limite del rapporto delle derivate $$\lim_{x\to x_{0}}\frac{f'(x)}{g'(x)} = L$$ Allora esiste anche il limite del rapporto delle funzioni ed \`{e} uguale al precedente $$\lim_{x\to x_{0}}\frac{f(x)}{g(x)} = L$$
+			\end{thm}
+			
+			\begin{proof}
+				Supponendo che $x_{0}$ sia l'estremo $a$, \`{e} possibile procedere con una dimostrazione generale considerando il limite destro e sinistro separatamente. Avendo appena supposto che $x\to a$, possiamo considerare un intorno di $a$ in cui $g'$ e $g$ siano diverse da $0$. Supponendo anche che $L$ sia finito, allora, per ogni $0 < \epsilon < 1$ esiste un $x_{1} > a$ tale che per ogni $\xi\in \; ]a,x_{1}[$ risulta $$L-\epsilon < \frac{f'(\xi)}{g'(\xi)} < L+\epsilon$$
+				Se $x\in \; ]a,b[$ allora per il teorema di Cauchy esiste un punto $\xi \in \; ]x,x_{1}[$ tale che 
+				$$\frac{f(x)-f(x_{1})}{g(x)-g(x_{1})} = \frac{f'(\xi)}{g'(\xi)}$$
+				e quindi per ogni $x\in \; ]a,x_{1}[$ 
+				$$L-\epsilon < \frac{f(x)-f(x_{1})}{g(x)-g(x_{1})} < L+\epsilon$$
+				D'altra parte 
+				$$\frac{f(x)-f(x_{1})}{g(x)-g(x_{1})} = \frac{f(x)}{g(x)}\frac{1-\frac{f(x_{1})}{f(x)}}{1-\frac{g(x_{1})}{g(x)}}$$ 
+				quindi 
+				$$\frac{f(x)}{g(x)} = \frac{f(x)-f(x_{1})}{g(x)-g(x_{1})} \frac{1-\frac{g(x_{1})}{g(x)}}{1-\frac{f(x_{1})}{f(x)}}$$
+				Dato che $x\to a$ sia $f(x)$ che $g(x)$ tendono all'infinito e 
+				$$Q(x) = \frac{1-\frac{g(x_{1})}{g(x)}}{1-\frac{f(x_{1})}{f(x)}}$$ 
+				tende a $1$. Esister\`{a} allora un punto $x_{2} \le x_{1}$ tale che per ogni $x\in \; ]a, x_{2}[$ risulta $1-\epsilon < Q(x) < 1+\epsilon$. Quindi, per ogni $x\in]a, x_{2}[$, sar\`{a} 
+				$$(1-\epsilon)(L-\epsilon) < \frac{f(x)}{g(x)} < (L+\epsilon)(1+\epsilon)$$
+				Da ci\`{o} si ottiene 
+				$$(L+\epsilon)(1+\epsilon) = L + (L+1)\epsilon + \epsilon^{2} < L + (L+2)\epsilon$$
+				e
+				$$(L-\epsilon)(1-\epsilon) = L - (L+1)\epsilon + \epsilon^{2} < L - (L+2)\epsilon$$
+				Concludendo, per ogni $x\in \; ]a, x_{2}[$ si avr\`{a}
+				$$L - (L+2)\epsilon < \frac{f(x)}{g(x)} < L + (L+2)\epsilon$$
+				quindi il rapporto $\frac{f(x)}{g(x)}$ tende a $L$
+			\end{proof}
+
+		\subsection{Cuspide e Punto Angoloso}
+			In analisi matematica si parla di cuspidi e punti angolosi, nel dominio di una funzione, quando abbiamo particolarit\`{a} durante lo studio della derivata di tale funzione.
+			
+			\begin{lem}[Cuspide]\index{Cuspide}
+				Si dice che una funzione di variabile reale $f(x)$ continua in un punto $x_{0}$ del dominio, ha una cuspide in $x_{0}$ se il limite destro e sinistro del rapporto incrementale in $x_{0}$ sono divergenti con segno opposto, in particolare:
+				$$\lim_{h\to 0^{\pm}}{{f(x_{0}+h)-f(x_{0})} \over {h}}=\mp \infty$$ 
+				oppure 
+				$$\lim_{h\to 0^{\mp}}{{f(x_{0}+h)-f(x_{0})} \over {h}}=\pm \infty$$ 
+			\end{lem}
+
+			\bigskip
+
+			\begin{lem}[Punto Angoloso]\index{Punto! Angoloso}
+				Un punto angoloso nel $x_{0}$ del dominio di una funzione reale a variabile reale $f(x)$ esiste quando derivata destra e derivata sinistra della funzione esistono ma sono diverse (ma non devono essere entrambe infinite).
+				$$\lim_{h\to 0^{-}}{{f(x_{0}+h)-f(x_{0})} \over {h}} \ne \lim_{h\to 0^{+}}{{f(x_{0}+h)-f(x_{0})} \over {h}}$$
+			\end{lem}
+		
+		\subsection{Convessit\`{a}, Concavit\`{a}}
+			\begin{lem}[Convessit\`{a}]\index{Funzione! Convessa}
+				Una funzione $f(x)$ si dice concava in un intervallo $[a,b]$ se per ogni punto $x_{0}$ appartenente a $[a,b]$ il grafico della funzione in questo intervallo \`{e} al di sopra della retta tangente nel punto $(x_{0}, f(x{0}))$\\[2ex]
+				Sia $f\colon [a,b]\to \R$ derivabile. Se $f$ possiede derivata seconda, allora la funzione sar\`{a} convessa se e solo se 
+				$$f''(x) \ge 0$$
+			\end{lem}
+
+			\bigskip
+
+			\begin{lem}[Concavit\`{a}]\index{Funzione! Concava}
+				Una funzione $f(x)$ si dice convessa in un intervallo $[a,b]$ se per ogni punto $x_{0}$ appartenente a $[a,b]$ il grafico della funzione in questo intervallo \`{e} al di sotto della retta tangente nel punto $(x_{0}, f(x{0}))$\\[2ex]
+				Sia $f\colon [a,b]\to \R$ derivabile. Se $f$ possiede derivata seconda, allora la funzione sar\`{a} concava se e solo se 
+				$$f''(x) \le 0$$
+			\end{lem}
+
+		\subsection{Flesso}
+			Un punto di flesso \`{e} un punto particolare della funzione e proprio per questo motivo, assume definizioni differenti in base al contento.
+			\begin{lem}\index{Flesso}
+				Un punto $x_{0}$ si dice di flesso per una funzione $f(x)$ se la retta tangente nel punto $(x_{0}, f(x_{0}))$ attraversa il grafico della funzione, 
+				cio\`{e} se la funzione $f(x)$ nel punto $x_{0}$ cambia concavit\`{a}\\[2ex]
+				Se $f(x)$ ha un punto di flesso in $x_{0}$ allora $f''(x_{0}) = 0$
+			\end{lem}
+
+			Il punto di flesso \`{e} categorizzabile in 3 diversi casi:
+			\begin{itemize}
+				\item \textbf{flesso orizzontale}: questo flesso esiste quando la derivata prima nel punto \`{e} zero $\Rightarrow f'(x_{0}) = 0$
+				\item \textbf{flesso obliquo}: esiste quando la derivata prima nel punto \`{e} diversa da zero e infinito $\Rightarrow f'(x_{0}) \ne 0 \ne \pm\infty$
+				\item \textbf{flesso verticale} o a tangente verticale: esiste quando la derivata prima nel punto tende $\infty \Rightarrow f'(x_{0}) = \pm\infty$
+			\end{itemize}
+
+	\clearpage
+
+	\section{Integrali}
+		L'operatore integrale associa alla funzione \emph{l'area orientata} sottesa dal suo grafico entro un dato intervallo $[a,b]$ nel dominio. 
+		Per capire il concetto di integrale possiamo partire da concetti pi\`{u} semplici. Supponendo di avere una funzione $f(x)$ positiva definita in un intervallo $[a,b[$. 
+		Supponendo di voler calcolare l'area sottesa a tale funzione e che tale funzione sia costante, la figura in esame sarebbe un rettangolo $F$ e la sua area $A(F)$ sarebbe il prodotto di base e altezza. Prendendo un caso per\`{o} pi\`{u} generale, dove $m \le f(x) \le M$ un rettangolo di base $[a,b[$ e di altezza $m$ e un secondo rettangolo con stessa base ma altezza $M$ sono contenuti in una curva $F$, otterremmo 
+		$$m(b-a) \le A(F) \le M(b-a)$$
+		Una migliore approssimazione si avrebbe dividendo l'intervallo $[a,b[$ in due sotto-intervalli $[a,c[$ e $[c,b[$, costruendo per entrambi due rettangoli di altezza rispettivamente $m_{1}, M_{1}$ del primo e $m_{2}, M_{2}$ del secondo. Replicando tale idea, si pu\`{o} arrivare ad un concetto pi\`{u} generale, dividendo l'intervallo $[a,b[$ in $n$ intervalli $I_{1}, I_{2}, \dots , I_{n}$ mediante i punti $x_{0}=a, x_{1}, x_{2}, \dots , x_{n}=b$ e costruire per ognuno di questi ($I_{k}$) due rettangoli, uno minorante e uno maggiorante di altezza rispettivamente $m_{k}$ e $M_{k}$.
+		A questo punto avremmo una situazione del tipo 
+		$$m_{1}(x_{1}-a) + m_{2}(x_{2}-x_{1}) + \dots + m_{b}(b-x_{n-1})$$
+		$$\le A(F) \le$$ 
+		$$M_{1}(x_{1}-a) + M_{2}(x_{2}-x_{1}) + \dots + M_{b}(b-x_{n-1})$$
+		ovvero
+		$$\sum_{i=1}^{n}m_{i}(x_{i}-x_{i-1}) \le A(F) \le \sum_{i=1}^{n}M_{i}(x_{i}-x_{i-1})$$
+		Si pu\`{o}, quindi, definire, e nei casi pi\`{u} semplici calcolare, l'area $A(F)$ come l'estremo superiore delle approssimazioni per diffetto o l'estremo inferiore delle approssimazioni per eccesso.
+
+		\subsection{Integrale di Riemann}
+			Considerando dei punti $a=x_{0} \le x_{1} \le \dots \le x_{n}=b$ si possono costruire gli intervalli $I_{1}=[x_{0}, x_{1}[$ , $I_{2}=[x_{1}, x_{2}[$ , \dots, $I_{n}=[x_{n-1}, x_{n}[$ .
+			Se $\lambda_{1}$, $\lambda_{2}$, \dots, $\lambda_{n}$ sono numeri reali, allora, la funzione $\phi(x)$, vale $\lambda_{1}$ in $I_{1}$, $\lambda_{2}$ in $I_{2}$, $\lambda_{n}$ in $I_{n}$ e si dice \emph{semplice o costate a tratti in $[a,b[$}\index{Funzione! semplice}. Per definire $\phi$ in tutto $\R$, la poniamo pari a $0$ nel complementare di $[a,b[$. Ricordando che la funzione caratteristica di un insieme $E$ \`{e} la funzione $\phi_{E}(x)$\index{Funzione! caratteristica} che vale 1 se  $x\in E$ $0$ altrimenti, si ottiene:
+			$$\phi(x) = \sum_{k=1}^{n}\lambda_{k}\phi_{I_{k}}(x)$$
+			Infatti, nell'intervallo $I_{1}$, la funzione $\phi_{1}$ vale $1$, mentre tutte le altre valgono $0$, in questo modo si avr\`{a} $\phi(x) = \lambda_{1}$ in $I_{1}$.
+			Se $\phi$ \`{e} la funzione semplice $\phi(x) = \sum_{k=1}^{n}\lambda_{k}\phi_{I_{k}}(x)$, allora definiremo \emph{integrale di $\phi$ nell'intervallo $[a,b[$}, il numero
+			$$\int_{a}^{b}\phi(x)dx = \sum_{k=1}^{n}\lambda_{k}m(I_{k}) = \sum_{k=1}^{n}\lambda_{k}(x_{k}-x_{k-1})$$
+			
+
+			Sia $f(x)$ una funzione definita nell'intervallo $I=[a,b[$ e limitata. Sia $\Im^{+}$ o $\Im^{+}(f)$ la classe di funzioni semplici in $I$ maggioranti la funzione $f$, cio\`{e} funzioni semplici per cui $\phi(x)=0$ \`{e} fuori di $I$ e $\phi(x)\ge f(x)$ per ogni $x\in I$ e $\Im^{-}$ o $\Im^{-}(f)$ funzioni semplici minoranti, tali che $\psi(x) = 0$ \`{e} fuori di $I$ e $\psi(x) \le f(x)$ per ogni $x\in I$.\\
+			Notiamo che queste classi non sono vuote: se $|f(x)|\le M$ in $[a,b[$, allora la funzione $\phi=M\phi_{[a,b[}$ \`{e} maggiorante e $\psi=-M\phi_{[a,b[}$ \`{e} minorante. Si nota che se $\phi \in \Im^{+}$ e $\psi \in \Im^{-}$ allora $\psi \le \phi$ in $I$, e di conseguenza, $\int_{a}^{b}\psi dx \le \int_{a}^{b}\phi dx$. Da ci\`{o} si pu\`{o} derivare che 
+			$$\sup_{\psi\in\Im^{-}}\int_{a}^{b}\psi\;dx \le \inf_{\phi\in\Im^{+}}\int_{a}^{b}\phi\;dx$$
+
+			\begin{lem}[Funzione integrabile]\index{Funzione! integrabile}
+				Una funzione $f$, definita in un intervallo $I=[a,b[$ e limitata, si dice integrabile in $[a,b[$ se 
+				$$\sup_{\psi\in\Im^{-}}\int_{a}^{b}\psi\;dx = \inf_{\phi\in\Im^{+}}\int_{a}^{b}\phi\;dx$$
+				Se ci\`{o} accade, il loro valore comune si chiamer\`{a} integrale della funzione $f$ esteso all'intervallo $[a,b[$ e si indicher\`{a} 
+				$$\int_{a}^{b}f(x)\;dx$$
+			\end{lem}
+
+			\medskip
+
+			\begin{thm}\index{Condizione di integrabilit\`{a}}
+				Condizione necessaria e sufficiente affich\`{e} una funzione $f(x)$, definita in un intervallo $[a,b[$ e limitata, sia integrabile in $[a,b[$ \`{e} che per ogni $\epsilon > 0$ esistano una funzione semplice maggiorante $\bar{\phi}$ e una funzione minorante $\bar{\psi}$ tali che
+				$$\int_{a}^{b}\bar{\phi}\;dx - \int_{a}^{b}\bar{\psi}\;dx < \epsilon $$
+			\end{thm}
+			
+			\bigskip
+
+			Pi\`{u} in generale \`{e} possibile scrivere:\\
+			\emph{Condizione necessaria e sufficiente affich\`{e} una funzione $f$, definita in un intervallo $[a,b[$ e limitata, sia integrabile in $[a,b[$ \`{e} che esistano una successione $\phi_{h}$ di funzioni maggioranti e una successione $\psi_{h}$ di funzioni minoranti tali che}
+			$$\lim_{h\to\infty}\left(\int_{a}^{b}\phi_{h}\;dx - \int_{a}^{b}\psi_{h}\;dx\right) = 0$$
+			
+			\smallskip
+
+			Se ci\`{o} accade si avr\`{a}
+			$$\int_{a}^{b}\psi_{h}\;dx \le \int_{a}^{b}f\;dx \le \int_{a}^{b}\phi_{h}\;dx$$
+			e quindi
+			$$\lim_{h\to\infty}\int_{a}^{b}\phi_{h}\;dx = \lim_{h\to\infty}\int_{a}^{b}\psi_{h}\;dx = \lim_{h\to\infty}\int_{a}^{b}f\;dx$$
+
+			\vspace*{2cm}
+			\begin{center}
+				\includegraphics[width=.8\textwidth]{src/Images/Riemann.png}\hfill
+			\end{center}
+		\subsubsection{Funzioni Integrabili}
+			\begin{thm}\index{Funzione! Integrabile}
+				Una funzione $f$ continua in $[a,b]$ \`{e} integrabile in $[a.b[$.
+			\end{thm}
+			\begin{proof}
+				Una funzione \`{e} uniformemente continua in $[a,b]$, il che significa che per ogni $\epsilon > 0$ esiste un $\delta > 0$ tale che se $I$ \`{e} un intervallo contenuto in $[a,b]$ di ampiezza minore di $\delta$, l'oscillazione $\sup_{I}(f)-\inf_{I}(f)$ sar\`{a} minore di $\epsilon$.\\
+				Dividendo l'intervallo $[a,b]$ in $n$ sotto intervalli $I_{1}, \dots, I_{n}$ ognuno con ampiezza minore di $\delta$, poniamo 
+				$$M_{k}=\sup_{I_{k}}(f(x))$$ 
+				e
+				$$m_{k} = \inf_{I_{k}}(f(x))$$ 
+				\`{e} quindi possibile scrivere
+				$$\phi = \sum_{k=1}^{n}M_{k}\phi_{I_{k}}$$
+				e
+				$$\psi = \sum_{k=1}^{n}m_{k}\phi_{I_{k}}$$
+				In base a quanto detto precedentemente. \`{e} possibile scrivere
+				$$M_{k}-m_{k} < \epsilon$$
+				e di conseguenza
+				$$\int\phi \; dx - \int\psi \; dx = \sum_{k=1}^{n}[M_{k}-m_{k}]m(I_{k}) < \epsilon\sum_{k=1}^{n}m(I_{k}) = \epsilon(b-a)$$
+				Essendo state verificate le condizioni di integrabilit\`{a}, la funzione $f$ \`{e} dunque integrabile.
+			\end{proof}
+
+			Un esempio di funzione non integrabile \`{e} la funzione \emph{di Dirichlet} che \`{e} definita come
+			$$\chi (x)={\begin{cases}1&x\in {\mathbb  {Q}}\\0&x\in {\mathbb  {R}}\setminus {\mathbb  {Q}}\end{cases}}$$\index{Funzione! di Dirichlet}
+			Sapendo che $f$ \`{e} $1$ per ogni numero razionale e $0$ per ogni numero irrazionale, allora se $P$ \`{e} una partizione di $n$ intervalli di $[a,b]$ allora, $M_{k}=\sup_{I_{k}}=1$ e $m_{k}=\inf_{I_{k}}=0$, ne segue che ogni intervallo di lunghezza $\ne 0$ contiene sia numeri razionali che irrazionali. Quindi, la somma superiore sar\`{a} pari a $1$ e la somma inferiore pari a $0$ per ogni partizione di $P$ di $[0,1]$, di conseguenza le due somme non potranno mai essere uguali.
+
+		\subsection{Teorema fondamentale del calcolo}
+			\begin{thm}[Della media integrale]\index{Teorema! media integrale}
+				Se $f(x)$ \`{e} una funzione integrabile in $[x_{1}, x_{2}[$, posto
+				$$m=\inf_{[x_{1}, x_{2}[}f(x) \text{ e } M=\sup_{[x_{1},x_{2}[}f(x)$$
+				si ha
+				$$m \le \frac{1}{x_{2}-x_{1}} \int_{x_{1}}^{x_{2}}f(t)\; dt \le M$$
+				Se poi $f$ \`{e} continua, esiste un punto $\zeta$ compreso tra $x_{1}$ e $x_{2}$ tale chapter
+				$$\frac{1}{x_{2}-x_{1}} \int_{x_{1}}^{x_{2}}f(t)\; dt = f(\zeta)$$
+			\end{thm}
+			\begin{proof}
+				Supponendo che $x_{1}<x_{2}$ si ha $m \le f(t) \le M$ $\forall t \in [x_{1}, x_{2}[$. Integrando si ottiene 
+				$$m(x_{2}-x_{1}) \le \int_{x_{1}}^{x_{2}}f(t)\; dt \le M(x_{2}-x_{1})$$
+				Dividendo tutto per $x_{2}-x_{1}$ si ottiene
+				$$m \le \frac{1}{x_{2}-x_{1}} \int_{x_{1}}^{x_{2}}f(t)\; dt \le M$$
+				Se per\`{o} $x_{1}> x_{2}$ si ottiene
+				$$m \le \frac{1}{x_{1}-x_{2}} \int_{x_{2}}^{x_{1}}f(t)\; dt \le M$$
+				che per\`{o} \`{e} identica alla precedente perch\'{e}
+				$$\int_{a}^{b}h(z) = -\int_{b}^{a}h(z)$$
+				e quindi 
+				$$\frac{1}{x_{1}-x_{2}} \int_{x_{2}}^{x_{1}}f(t)\; dt = \int_{x_{1}}^{x_{2}}f(t)\; dt$$\\[1.5ex]
+				Per dimostrare 
+				$$\frac{1}{x_{2}-x_{1}} \int_{x_{1}}^{x_{2}}f(t)\; dt = f(\zeta)$$
+				supponiamo che $f(x)$ sia continua in $[x_{1},x_{2}[$, il valore di 
+				$$\frac{1}{x_{2}-x_{1}} \int_{x_{1}}^{x_{2}}f(t)\; dt$$
+				\`{e} compreso tra l'estremo inferiore e l'estremo superiore di $f$, e per il teorema dei valori intermedi, esister\`{a} un punto $\zeta$ in cui $f(x)$ assume quel valore.
+			\end{proof}
+
+			\bigskip
+
+			\begin{thm}[Teorema fondamentale calcolo integrale]\index{Teorema! fondamentale del calcolo integrale}\index{Teorema! di Torricelli-Barrow}
+				Sia $f(x)$ una funzione continua e limitata in $[a,b[$. La sua funzione integrale
+				$$F(x) = \int_{a}^{x}f(t)\; dt$$
+				\`{e} derivabile, e si ha $F'(x) = f(x)$.\\
+				Se poi $G(x)$ \`{e} una funzione derivabile e $G'(x) = f(x)$ allora si ha $F(x)=G(x)-G(a)$
+			\end{thm}
+			\begin{proof}
+				La dimostrazione di 
+				$$F(x) = \int_{a}^{x}f(t)\; dt$$
+				\`{e} conseguenza del teorema della media integrale, infatti
+				$$\frac{F(x+h)-F(x)}{h} = {{1} \over {h}}\int_{a}^{x+h}f(t)\; dt = f(\zeta)$$
+				dove $\zeta$ \`{e} un punto compreso tra $x$ e $x+h$. Quando $h$ tende a $0$, $\zeta$ tende a $x$. Per la continuit\`{a} della funzione $f$, $f(\zeta)$ tender\`{a} a $f(x)$ e quindi
+				$$\lim_{h \to 0}\frac{F(x+h)-F(X)}{h} = f(x)$$
+				Quindi la funzione $F(x)$ \`{e} derivabile e la sua derivata \`{e} $f(x)$\\[1.3ex]
+				Per dimostrare $F(x)=G(x)-G(a)$, supponiamo che $G(x)$ sia una funzione che verifica la relazione $G'(x)=f(x)$. Si ha allora $G'(x)-F'(x)=f(x)-f(x)=0$ e cio\`{e} la derivata \`{e} nulla in $[a,b[$.
+				Da ci\`{o} si deduce che $G(x)-F(x)$ \`{e} costante ed \`{e} uguale al suo valore nel punto $a$ dove vale $G(a)$ dato che 
+				$$F(a)=\int_{a}^{a}f(t)\; dt = 0$$
+				Dunque $G(x)-F(x)=G(a) \Rightarrow F(x)=G(x)-G(a)$
+			\end{proof}
+
+			Tali teoremi ci suggeriscono che se si conosce una funzione $G(x)$ che abbia derivata $f(x)$, cio\`{e} \textbf{\underline{una primitiva}} di $f(x)$, allora si conosce anche la funzione integrale $F(x)=G(x)-G(a)$, e quindi il calcolo dell'integrale sar\`{a} ricondotto alla ricerca di una sua primitiva. Questo tipo di integrale prende il nome di \emph{integrale indefinito} e si indica 
+			$$\int f(x)\; dx$$
+
+		\subsection{Schema generale di calcolo}\index{Calcolo di un integrale}
+				Dai teoremi precedenti possiamo, quindi, estrapolare uno schema per aiutarci nel calcolo di un integrale definito in un intervallo $[a,b]$ della funzione $f$ come segue:
+				\begin{enumerate}
+					\item Trovare una primitiva $G(x)$ della funzine $f$, cio\`{e} una funzione tale che $G'(x)=f(x)$
+					\item Calcolare $G(b)-G(a)$ ottenendo il valore dell'integrale
+				\end{enumerate}
+
+				In formule, ci\`{o} che \`{e} stato appena scritto, si pu\`{o} riscrivere
+				$$\int_{a}^{b}f(x)\; dx = G(x)\bigg|_{a}^{b} = G(b)-G(a)$$ 
+				dove $G$ \`{e} ovviamente una primitiva
+
+				\subsubsection{Integrazione per sostituzione}\index{Integrazione!per sostituzione}
+					Le primitive che riusciamo ad ottenere direttamente da una derivata sono poche, \`{e} spesso pi\`{u} utile osservare che la derivata della funzione composta $F(g(x))$ \`e $F'(g(x))g'(x)$
+					Da ci\`{o}
+					$$\int F'(g(x))g'(x)\; dx = F(g(x))$$
+					Sostituendo $g(x)$ con $u$, \`{e} possibile calcolare
+					$$\int f(u)\; du = F(u)$$
+					e sostituire poi $u$ con $g(x)$.
+					Quindi la formula generale di sostituzione \`{e}
+					$$\int f(g(x))g'(x)\; dx = \int f(u)\; du \text{ con } u=g(x) \text{ e } du=g'(x)dx$$ 
+			
+				\subsubsection{Integrazione per parti}\index{Integrazione!per parti}
+					Per l'integrale del prodotto di due funzioni non ci sono regole utilizzabili, ma un aiuto viene dalla regola di derivazione del prodotto di due funzioni
+					$$f'(x)g'(x) = f(x)g'(x)+g(x)f'(x)$$
+					Se si integrano entrambi i membri ricordando che l'integrale di una derivata \`{e} la funzione stessa
+					$$f(x)g(x) = \int f(x)g'(x)\; dx + \int f'(x)g(x)\; dx$$
+					e quindi
+					$$\int f(x)g'(x)\; dx = f(x)g(x) - \int g(x)f'(x)\; dx$$
+					Tale procedimento non risolve interamente l'integrale ma ci pu\`{o} aiutare semplificandolo.
+
+				\subsubsection{Integrazione di funzioni razionali}\index{Integrazione!di funzioni razionali}
+					Integrare funzioni razionali pu\`{o} diventare complesso con il crescere della molteplicit\`{a} delle radici di questa. Facendo riferimento per\`{o} a casi semplici, possiamo cercare di scrivere la funzione
+					$$f(x)=\frac{P(x)}{Q(x)}$$
+					come somma di \emph{frazioni parziali}, cio\`{e}, frazioni del tipo 
+					$$\frac{c}{x+a}$$
+					A questo punto per\`{o} si presentano situazioni differenti, in base al grado rispettivo tra numeratore e denominatore:
+					\begin{enumerate}
+						\item \textbf($P(x)>Q(X)$): il grado del numeratore \`{e} maggiore al grado del denominatore
+						\item \textbf($P(x)=Q(X)$): il grado del numeratore e del denominatore coincidono
+						\item \textbf($P(x)<Q(X)$): il grado del denominatore \`{e} maggiore al grado del numeratore
+					\end{enumerate}
+					e per ogni situazione presentata esiste una metodologia di risoluzione per facilitare il calcolo dell'integrale
+					$$\int\frac{P(x)}{Q(x)}$$
+					
+
+					\textbf{Caso 1}\\
+					Per calcolare questo tipo di integrale ci sono due metodi alternativi: nel primo si esegue la divisione tra $P(x)$ e $Q(x)$ sostituendo il risultato direttamente nell'integrale. Nel secondo si utilizza il \emph{principio di identit\`{a}} dei polinomi.\\
+
+					Vediamo nel dettaglio il metodo della divisione con un esempio.\\
+					Dato l'integrale 
+					$$\int\frac{x^{3}+3x^{2}}{x^{2}+1}\; dx$$
+					si pu\`{o} notare che il grado del numeratore \`{e} maggiore di quello del denominatore qui \`{e} possibile procedere.
+					\[
+					\begin{array}{c|c}
+					x^{3}+3x^{2}+0x+0  & x^{2}+1\\
+					\cline{2-2}\\
+					-x^{3}+0+0-x & x+3 \leftarrow\text{ quoziente}\\ 
+					0+3x^{2}-x+0 &\\
+					0-3x^{2}+0-3  &\\
+					\cline{1-1}\\
+					0+0-x-3 \leftarrow\text{ resto}&
+					\end{array}
+					\]
+					Da tale divisione quindi possiamo riscrivere la funzione originale come
+					$$\frac{x^{3}+3x^{2}}{x^{2}+1} = x+3+\frac{-x-3}{x^{2}+1}$$
+					ottenendo
+					$$\int\frac{x^{3}+3x^{2}}{x^{2}+1}\; dx = \int x+3\;dx + \int\frac{-x-3}{x^{2}+1}\; dx = \frac{x^{2}}{2}+3x-\frac{1}{2}\int\frac{2xdx}{x^{2}+1}-3\int\frac{dx}{x^{2}+1}=$$
+					$$=\frac{x^{2}}{2}+3x-\frac{1}{2}\log(x^{2}-1)-3\arctan(x)+c$$
+					
+					Se fosse stato usato il principio di intentit\`{a} dei polinomi il risultato ovviamente sarebbe stato identico ma si sarebbe svolto come segue:
+					$$GRADO(x^{3}-3x^{2})-GRADO(x^{2}-1)=3-2=1$$
+					$$\frac{x^{3}+3x^{2}}{x^{2}+1} = ax+b+\frac{cx+d}{x^{2}+1}$$
+					$$x^{3}+3x^{2} = (ax+b)(x^{2}+1)+cx+d$$
+					da qui si pu\`{o} determinare $a$, $b$, $c$, $d$
+					$$x^{3}+3x^{2} = (ax+b)(x^{2}+1)+cx+d \equiv ax^{3}+bx^{2}+(a+c)x+b+d$$
+					che tramite un sistema di 4 equazioni in 4 incognite si ottengono i valori di $a$, $b$, $c$, $d$ ottenendo 
+					$$x+3+\frac{-x-3}{x^{2}+1}$$
+
+					\bigskip
+
+					\textbf{Caso 2}\\
+					In questo caso non ci sono regole definite perch\`{e} potrebbe essere possibile semplificare i due polinomi facendo dei raccoglimenti, oppure in casi estremi \`{e} comunque possibile utilizzare il metodo della divisione tra polinomi.
+
+					\bigskip
+
+					\textbf{Caso 3}\\
+					Ricordando il \emph{teorema fondamentale dell'algebra}, che afferma che un polinomio di grado $n$ ammette esattamente $n$ radici, e utilizzandolo per scomporre il polinomio $Q(x)$ nella forma
+					$$Q(x) = k(x-\alpha_{1})^{m_{1}}(x-\alpha_{2})^{m_{2}}\dots(x-\alpha_{k})^{m_{k}}$$
+					si prova a scrivere la funzione integranda nella forma
+					$$\frac{P(x)}{Q(x)} = \frac{P(x)}{(x-\alpha_{1})\dots(x-\alpha_{k})} = \frac{A_{1}}{x-\alpha_{1}}+\dots+\frac{A_{k}}{x-\alpha_{k}}$$
+					Essendo i valori di $A$ distinit e reali, si cercano utilizzando due metodologie.\\
+
+					La prima consiste nel molteplicare entrambi i membri dell'equazione
+					$$\frac{P(x)}{(x-\alpha_{1})\dots(x-\alpha_{k})} = \frac{A_{1}}{x-\alpha_{1}}+\dots+\frac{A_{k}}{x-\alpha_{k}}$$
+					per $x-\alpha_{h}$ (con $h=1,2,3,\dots,k$) per tutte le $k$ radici ottenendo:
+					$$\frac{P(x)(x-\alpha_{h})}{(x-\alpha_{1})\dots(x-\alpha_{k})} = \frac{A_{1}(x-\alpha_{h})}{x-\alpha_{1}}+\dots+\frac{A_{h}(x-\alpha_{h})}{x-\alpha_{h}}+\dots+\frac{A_{k}(x-\alpha_{h})}{x-\alpha_{k}}$$
+					Se per ogni radice si calcola il limite per $x\to \alpha_{h}$ si ottengono $k$ limiti della forma
+					$$\lim_{x\to\alpha_{h}}\frac{(x-\alpha_{h})P(x)}{Q(x)}=A_{h}$$
+					Si osservi che ogni volta al denominatore manca il termine $x-\alpha_{h}$. Dal calcolo di tutti questi limiti otteniamo il valore di tutte le costanti $k$ $A$.\\
+
+					Il secondo metodo consiste nell'utilizzare il prinicipo di identit\`{a} dei polinomi, andando a calcolare tutte le costanti $k$ $A$ utilizzando un sistema lineare di $k$ equazioni in $k$ incognite.
+					Supponendo che la funzione integranda si possa scrivere 
+					$$\frac{P(x)}{Q(x)} = \frac{A_{1}}{x-\alpha_{1}}+\dots+\frac{A_{k}}{x-\alpha_{k}}$$
+					e sommando i termini del secondo membro dell'equazione appena scritta si ottiene
+					$$P(x) = A_{1}[(x-\alpha_{2})\dots(x-\alpha_{k})]+A_{2}[(x-\alpha_{1})(x-\alpha_{3})\dots(x-\alpha_{k})]+\dots+$$
+					$$+A_{k}[(x-\alpha_{1})(x-\alpha_{2})\dots(x-\alpha_{k-1})]$$
+					A questo punto per il principo di identit\`{a} dei polinomi si ottiene un sistema di $k$ equazioni in $k$ incognite, che risolvendolo si ottengono i valori di tutte le $k$ $A$ costanti
+
+		\subsection{Integrali impropri}
+			Se si volesse calcolare l'integrale di una funzione non limitata o in un intervallo non limitato, le regole finora date, non sarebbero applicabili. Per ovviare a tale problema esisete una categoria di integrali appositi a questo scopo detti \emph{integrali impropri}.
+
+			\begin{lem}[Integrale improprio in $\left[a,b\right[$]\index{Integrale improprio}
+				Una funzione $f(x)$ definita in $]a,b[$ e non limitata vicino all'estremo $a$, si dir\`{a} integrabile in senso improprio in $[a,b[$ se $f$ \`{e} integrabile in ogni intervallo $[t,b[$ con $a<t<b$ e se esiste finito il limite
+				$$\lim_{t\to a^{+}}\int_{t}^{b}f(x)\; dx$$
+				Il valore di questo limite \`{e} l'integrale tra $a$ e $b$ della funzione $f$
+				$$\int_{a}^{b}f(x)\; dx = \lim_{t\to a^{+}}\int_{t}^{b}f(x)\; dx$$\\[1.2ex]
+				Allo stesso modo se $f(x)$ non \`{e} limitata vicino al secondo estremo $b$, si pone
+				$$\int_{a}^{b}f(x)\; dx = \lim_{t\to b^{-}}\int_{a}^{t}f(x)\; dx$$\\[1.5ex]
+				Se uno dei qualsiasi limiti sopra descritti non esistesse o fosse infinito, si dice che la funzione $f(x)$ non \`{e} integrabile in $[a,b[$
+			\end{lem}
+
+			\medskip
+
+			\begin{lem}[Integrale improprio in $\left[a,+\infty\right[$]\index{Integrale improprio}
+				Sia $f(x)$ una funzione definita nella semiretta $[a,+\infty[$, si dice che $f(x)$ \`{e} integrabile in senso improprio in $[a,+\infty[$ se $f$ \`{e} integrabile in ogni intervallo $[a,t[$ con $t>a$ e se esiste finito il limite
+				$$\lim_{t\to+\infty}\int_{a}^{t}f(x)\; dx$$
+				In questo caso si pone
+				$$\int_{a}^{+\infty}f(x)\; dx = \lim_{t\to+\infty}\int_{a}^{t}f(x)\; dx$$\\[1.2ex]
+				Cosa analoga, con i rispettivi cambiamenti, \`{e} la definizione per l'integrale tra $-\infty$ e $a$.\\[1.5ex]
+				Se tali limiti non esistessero o fossero infinito, allora $f(x)$ non \`{e} integrabile in $[a,+\infty[$ (o $]-\infty, a]$).
+			\end{lem}
+
+			Nel caso si voglia calcolare una $f(x)$ che non \`{e} limitata in nessun estremo, oppure si voglia integrare tra $-\infty$ e $+\infty$, l'idea \`{e} di usare, nei rispettivi casi, una delle definizioni sopra date, spezzando l'intervallo in due. Nel caso in cui almeno uno dei due integrali non esistesse allora tutta la funzione si dice non integrabile.
+
+\section{Equazioni Differenziali}
+			In analisi matematica un'equazione differenziale \`{e} un'equazione che lega una funzione incognita alle due derivate, e se la funzione \`{e} di una sola variabile e l'equazione ha solo derivate ordinarie allora l'equazione si dice \emph{equazione differenziale ordinaria}\index{Equazione differenziale! ordinaria}. 
+			Le equazioni differenziali sono le equazioni pi\`{u} studiate ed utilizzate in tutti gli ambiti dove la matematica viene usata come strumento.
+			Nel caso pi\`{u} semplice nell'equazione compare solo la derivata e tale tipo di equazione viene risolta utilizzando il \emph{teorema fondamentale del calcolo integrale} e le sue soluzioni hanno la forma $$f(t) = f_{0}+G(t)$$
+			dove $f_{0}$ \`{e} costante e $G$ \`{e} la primitiva di $g$ e quindi
+			$$G(t) = \int g(t)\; dt$$
+			
+			\begin{lem}[Equazione differenziale ordinaria]\index{Equazione differenziale! ordinaria}
+				Sia $F\colon\Omega\subseteq\C^{n+2}\rightarrow C$ con $\Omega\ne\emptyset$ un insieme aperto e connesso e $n\in\N$
+				Si definisce equazione differenziale ordinaria di ordine $n$ una relazione del tipo
+				$$F\left(x,u(x), u'(x), \dots, u^{n}(x)\right) = 0$$
+				dove $u^{i}(x)$ si dice derivata $i$-esima della funzione $u(x)$
+			\end{lem}
+
+			\medskip
+
+			\begin{lem}[Equazione differenziale lineare]\index{Equazione differenziale! lineare}
+				Si dice equazione differenziale lineare se $F$ \`{e} combinazione lineare di $u,u',\dots,u^{n}$, cio\`{e}
+				$$F\left(x,u,u',\ldots ,u^{(n)}\right)=s(x)+b_{0}(x)u+b_{1}(x)u'+\ldots +b_{n}(x)u^{(n)}$$
+				o
+				$$u^{(n)}=\sum _{i=0}^{n-1}a_{i}(x)u^{(i)}+r(x)$$
+				dove $r(x),a_{0}(x),a_{1}(x),\ldots ,a_{n-1}(x)\in C^{0}(I)$
+			\end{lem}
+
+			\bigskip
+
+			\subsection{Equazioni differenziale I ordine}
+
+				\begin{lem}[Equazione differenziale lineare del I ordine]\index{Equazione differenziale! lineare del I ordine}
+					Si chiama equazione differenziale lineare del primo ordine l'equazione della forma
+					$$y'=a(x)y+b(x)$$
+					dove $a(x)$ e $b(x)$ sono funzioni continue in un intervallo fissato. La funzione $y=y(x)$ \`{e} l'incognita dell'equazione differenziale
+				\end{lem}
+
+				\begin{thm}[Soluzioni dell'equazione differenziale lineare]\index{Soluzioni dell'equazione differenziale lineare}
+					Tutte le soluzioni dell'equazione differenziale sono espresse da
+					$$y(x)=e^{A(x)}\int e^{-A(x)}b(x)\;	dx$$
+					dove $A(x)$ \`{e} una primitiva di $a(x)$
+				\end{thm}
+
+				Le equazioni differenziali lineari del primo ordine omogenee sono della forma 
+				$$y(x) = ce^{A(x)}$$
+				in quanto $b(x) = 0$, e dove $A(x)$ \`{e} una primitiva di $a(x)$ e $c$ una costante arbitraria
+
+				\subsubsection{Equazioni a variabili separabili}
+					\begin{lem}\index{Equazione differenziale! a variabili separabili}
+						Si dicono equazioni differenziali del primo ordine a variabili separabili le equazioni del tipo
+						$$y'=f(x)g(y)$$
+						dove $f(x)$ e $g(y)$ sono funzioni continue.
+					\end{lem}
+
+					Se $g(y_{0})=0$ per un qualche valore reale di $y_{0}$, allora la funzione costante $y(x)=y_{0}$ \`{e} soluzione dell'equazione differenziale. Se invece $g(y)$ non si annulla, possiamo dividere entrambi i membri dell'equazione ed integrare rispetto a $x$ ottenendo
+					$$\int\frac{y'(x)}{g(y(x))}\; dx = \int f(x)\; dx$$
+					Indicando con $F(x)$ la primitiva di $f(x)$ e con $G(y)$ la primitiva della funzione $\frac{1}{g(y)}$ con $y$ una variabile indipendente, la relazione si pu\`{o} anche scrivere come
+					$$G(y(x)) = F(x)+c$$
+
+ 
+			\subsection{Problema di Cauchy}
+				Il problema di Cauchy consiste nel trovare la soluzione di un'equazione differenziale di ordine $n$ 
+				$$f(x, y(x), y'(x), y''(x),\dots, y^{n}(x))=0$$
+				tale che soddisfi le condizioni iniziali
+				$$y(a)=y_{0}$$
+				$$y'(a)=y_{1}$$
+				$$\dots$$
+				$$y^{n-1}(a)=y_{n-1}$$
+				
+				Il teorema di esistenza e unicit\`{a} per un problema di Cauchy dimostra che la soluzione esiste ed \`{e} localmente unica, se $f$ rispetta opportune ipotesi. Inoltre, \`{e} sempre possibile ridurre un problema di ordine $n$ ad un sistema di $n$ equazioni differenziali ordinarie, ponendo
+				$$z_{1}=y(x)$$
+				$$z_{2}=z'_{1}(x) = y'(x)$$
+				$$\dots$$
+				$$z_{n}(x)=z'_{n-1}(x)=y^{n-1}(x)$$
+
+				\begin{thm}[Teorema di Cauchy per le equazioni lineari del I ordine]\index{Teorema! di Cauchy per le differenziali del I ordine}
+					Dato il problema di Cauchy
+					$$\begin{cases}
+						&y'=a(x)y+b(x)\\
+						&y(x_{0})=y_{0}
+					\end{cases}$$
+					Sia $x_{0}$ un punto di un intervallo dove $a(x)$ e $b(x)$ sono continue. Per ogni numero reale $y_{0}$ esiste ed \`{e} unica la soluzione del problema di Cauchy
+				\end{thm}
+				\begin{proof}
+					Sapendo che l'equazione differenziale ha infinite soluzioni, occorre provare, per\`{o} che tra queste ne esiste una, ed una sola, con la propriet\`{a} che $y(x_{0}) = y_{0}$. Per questo si prende $A(x)$ come primitiva di $a(x)$ cosicch\`{e} $A(x_{0})=0$, quindi
+					$$A(x)=\int_{x_{0}}^{x}a(t)\; dt$$
+					Ora si scrive la formula
+					$$y(x)=e^{A(x)}\int e^{-A(x)}b(x)\;	dx$$
+					mettendo in evidenza la costante che viene dall'integrazione indefinita
+					$$y(x)=e^{A(x)}\left(c+\int e^{-A(x)}b(x)\;	dx\right)$$
+					Dato che $A(x_{0}) = 0$, si avr\`{a} che $y(x_{0})=e^{0}(x+0)=c$ quindi esiste una sola costante $c$ per cui
+					$$c=y_{0}=y(x_{0})$$
+				\end{proof}
+
+				Provando a dare un significato geometrico al problema di Cauchy, si suppone $a(x)$ e $b(x)$ continue su tutto l'asse reale. 
+				Il teorema di Cauchy per le equazioni differenziali lineari del primo ordine, afferma che, per ogni punto $(x_{0},y_{0})$ passa una ed una sola soluzione (curva integrale) dell'equazione differenziale in
+				$$\begin{cases}
+					&y'=a(x)y+b(x)\\
+					&y(x_{0})=y_{0}
+				\end{cases}$$
+				Tenendo conto che per ogni punto $(x_{0},y_{0})$, il coefficiente angolare $y'(x_{0})$ della retta tangente a tali curve \`{e} determinato dall'equazione differenziale stessa, si avr\`{a}
+				$$y'_{0} = a(x_{0})y(x_{0})+b(x_{0}) = a(x_{0})y_{0}+b(x_{0})$$
+
+
+			\subsection{Equazioni differenziale II ordine}
+				Un'equazione differenziale del secondo ordine \`{e} un'equazione nella quale, oltre all'incognita $y(x)$, compaiono anche la derivata prima $y'(x)$ e la derivata seconda $y''(x)$.
+
+				\begin{lem}[Equazione differenziale lineare del II ordine]\index{Equazione differenziale! lineare del II ordine}
+					Un'equazione differenziale lineare del secondo ordine a coefficienti costanti \`{e} del tipo
+					$$y''+ay'+by=f(x)$$
+					con $a$ e $b$ costanti e $f(x)$ una funzione continua in un intervallo $I$.
+				\end{lem}
+
+				Le costanti $a$ e $b$ si dicono \emph{coefficienti} dell'equazione, mentre $f(x)$ \`{e} il termine noto. L'equazione viene detta omogenea se $f(x)=0$
+				Una funzione $y=y(x)$ \`{e} soluzione dell'equazione se \`{e} derivabile due volte e se $y(x)$, $y(x)'$, $y(x)''$ soddisfano l'equazione per ogni $x$ dell'intervallo fissato.
+				L'insieme di tutte le soluzioni si chiama \emph{integrale generale}\index{Integrale generale}.

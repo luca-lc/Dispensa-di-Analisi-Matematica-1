@@ -1,0 +1,40 @@
+\chapter{Numeri Complessi}\index{Numeri! Complessi}
+\thispagestyle{fancy}
+
+		Per poter risolvere certe equazioni come ad esempio $x^2+1=0$ \`{e} necessario un insieme di numeri in pi\`{u}, perch\'{e} tale tipo di equazioni non ha soluzione nel campo dei reali.
+		
+		L'insieme dei numeri complessi \`{e} indicato con $\C$, mentre i numeri sono indicati con la lettera $i$ detta \emph{unit\`{a} immaginaria}, avente la propriet\`{a} che $i^2 = -1$.
+		Cos\`{i} facendo anche le equazioni di $2^o$ grado del tipo $x^2+2px+q=0$ avranno soluzione e se $p^2 < q$ allora la soluzione sar\`{a} $$x = -p \pm i\sqrt{q-p^2}$$
+		
+		Quindi, i numeri complessi, si posso scrivere nella forma $a+ib$ dove \emph{a} e \emph{b} sono numeri reali ma vengono detti rispettivamente \emph{parte reale} e \emph{parte immaginaria}.
+		
+		\section{Operazioni con i numeri complessi}
+				\subsection{Somma e Prodotto}
+				Definendo le operazioni di somma e prodotto tra numeri complessi, c'\`{e} da tenere a mente sempre che $i^2 = -1$, in questo modo possiamo vedere che
+				\begin{itemize}
+					\item $(a+ib)+(c+id) = (a+c) + i(c+d)$
+					\item $(a+ib)(c+id) = (ac-bd)+i(ad+bc)$
+				\end{itemize}
+			
+				\subsection{Modulo}
+					$$\alpha = a+ib \in \C \Rightarrow |\alpha| = \sqrt{a^2+b^2}$$
+					
+					Anche i numeri complessi possono essere messi in relazioni con la retta in corrispondenza biunivoca, avendo l'asse $x$ come \emph{retta reale} e l'asse $y$ come \emph{asse immaginaria}. Creando un grafico, utilizzando questo metodo, \`{e} facile notare che il modulo di un numero complesso corrisponde al calcolare la distanza del punto definito da \emph{a} e \emph{b} rispetto all'origine.
+					
+					\begin{figure}[ht]
+						\centering
+						\includegraphics[width=.5\textwidth]{src/Images/GraficoComplex.png}
+						\caption{Distanza del punto $\alpha$ dall'origine}
+					\end{figure}
+				
+				\subsection{Rappresentazione Trigonometrica}
+					Tale corrispondenza tra numeri complessi e punti del piano e la visione grafica, aiuta a capire che il numero $\alpha$ \`{e} possibile descriverlo anche attraverso la sua distanza dall'origine e l'angolo che lo divide dall'asse dei reali, arrivando ad avere un'equazione del tipo
+					$$\alpha = a+ib = d(\cos(\theta) + i\sin(\theta)) = de^{i\theta}$$					
+					dove \emph{d} \`{e} la distanza tra il punto e l'origine degli assi, $\theta$ l'angolo che si forma tra l'asse $x$ e il punto.\\
+					Nella formula $de^{i\theta}$ chiaramente la parte esponenziale sar\'{a} congruente a $\cos(\theta)+i\sin(\theta)$, e le due formule sono totalmente interscambiabili.
+				
+				\subsection{Radici}
+					Una radice \emph{n}-esima di $\omega$ \`{e} un numero complesso $z$ tale che $z^n = \omega$.\\
+					Inoltre\\
+					$z = de^{i\theta} \; \land \; \omega = De^{i\delta} \\ \Rightarrow z^{n} = d^{n}e^{in\theta} = De^{i\delta} \\ \Rightarrow d^{n} = D \; \land \; n\theta = \delta + 2k\pi \\ \Rightarrow r = \sqrt[n]{D}$
+		

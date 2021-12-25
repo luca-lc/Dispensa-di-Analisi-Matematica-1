@@ -1,0 +1,190 @@
+\chapter{Successioni e Serie}
+\thispagestyle{fancy}
+
+	Una successione (o sequenza infinita) pu\`{o} essere definita, intuitivamente, come un elenco ordinato infinito numerabile di oggetti, chiamati \emph{termini} della successione.
+	In contrasto con gli insiemi numerabili, per una successione \`{e} rilevante sia l'ordine che la cardinalit\`{a} dei termini, e tali caratteristiche distinguono una \emph{n-upla} ordinata da un insieme costituito da $n$ elementi.
+	Le successioni sono largamente studiate nel calcolo infinitesimale in quanto il loro domino $\N\subset\R$ e quindi \`{e} possibile rappresentarle in un codominio di $\R$
+
+	\begin{lem}[Successione]\index{Successione}
+		Una successione di elementi di un dato insieme $A$ \`{e} un'applicazione dell'insieme $\N$ dei numeri naturali in $A$
+		$$f\colon N \to A$$
+		L'elemento $a_{n}$ della successione \`{e} quindi l'immagine del numero $n$secondo la funzione $f$
+		$$a_{n}=f(n)$$
+	\end{lem}
+
+	\subsection{Limite di Successione}
+		\begin{lem}[Limite di successione convergente]\index{Limite! di successione convergente}
+			Un numero reale $a$ \`{e} limite della successione $a_{n}$ se qualunque sia $\epsilon > 0$, esiste un numero $\upsilon$ tale che $a-\epsilon < a_{n} < a+\epsilon$ ($|a_{n}-a|<\epsilon$) per ogni $n > \upsilon$
+			$$\lim_{n\to +\infty}a_{n} = a \iff \forall\; \epsilon>0 \; \exists\; \upsilon\; |\; \forall n>\upsilon \; . \; |a_{n}-a|<\epsilon$$
+		\end{lem}
+
+		\medskip
+
+		\begin{lem}[Successione convergente]\index{Successione convergente}
+			Una successione si dice convergente se
+			$$\exists a \in \R \; | \; \lim_{n\to +\infty}a_{n} = a$$
+		\end{lem}
+
+		\medskip
+
+		\begin{thm}[Unicit\`{a} del limite]\index{Unicit\`{a} del limite}
+			Una successione convergente non pu\`{o} avere due limiti distinti			
+		\end{thm}
+		\begin{proof}
+			Supponendo per assurdo che esistano due limiti distinti, $a_{n}\to a$ e $a_{n}\to b$ con $a\ne b$ e ponendo $\epsilon = \frac{|a-b|}{2}>0$ si ottiene
+			$$\exists \upsilon_{1} \; | \; \forall n > \upsilon_{1} \; . \;|a_{n}-a|<\epsilon$$
+			$$\wedge$$
+			$$\exists \upsilon_{2} \; | \; \forall n > \upsilon_{1} \; . \;|a_{n}-b|<\epsilon$$
+			Ponendo ora, $\upsilon = \max\{\upsilon_{1}, \upsilon_{2}\}$ le due relazioni sopra valgono contemporaneamente e sia ha 
+			$$|a-b| = |(a-a_{n})+(a_{n}-b)| \le |a-a_{n}|+|a_{n}-b| = |a_{n}-a|+|a_{n}-b| < \epsilon+\epsilon = |a-b|$$
+			ottenendo che $|a-b|<|a-b|$ che \`{e} assurdo.
+		\end{proof}
+
+		\bigskip
+
+		\begin{lem}[Limite di successione divergente]\index{Limite! di successione divergente}
+			Una successione $a_{n}$ ha limite uguale a $+\infty$ se qualunque sia $M>0$ esiste un numero $\upsilon$ tale che $a_{n}>M$ per ogni $n>\upsilon$
+			$$\lim_{n\to +\infty}a_{n}=+\infty \iff \forall M>0 \exists \upsilon \; | \; \forall n>\upsilon \; . \; a_{n}>M$$
+			$$\lim_{n\to +\infty}a_{n}=-\infty \iff \forall M>0 \exists \upsilon \; | \; \forall n>\upsilon \; . \; a_{n}<-M$$			
+		\end{lem}
+
+		\medskip
+		
+		\begin{lem}[Successione divergente]\index{Successione divergente}
+			Una successione si dice divergente se
+			$$\lim_{n\to +\infty}a_{n} = \pm\infty$$
+		\end{lem}
+
+		\medskip
+
+		\begin{lem}[Successione irregolare]\index{Successione irregolare}
+			Una successione si dice irregolare o indeterminata se
+			$$\not\exists\lim_{n\to +\infty}a_{n}$$
+		\end{lem}
+
+		\subsubsection{Successioni limitate}
+			\begin{lem}[Successione limitata]\index{Successione limitata}
+				Una successione $a_{n}$ si dice limitata se esiste un numero reale $M$ tale che
+				$$|a_{n}| \le M \equiv -M \le a_{n} \le M$$
+			\end{lem}
+
+			Esistono successioni limitate irregolari, cio\`{e} successioni limitate che non ammettono limite
+
+			\begin{thm}[Successione convergente \`{e} limitata]\index{Teorema! convergente \`{e} limitata}
+				Ogni successione convergente \`{e} limitata
+			\end{thm}
+			\begin{proof}
+				Supponendo che $a_{n}$ converga ad $a$ e scegliendo un $\epsilon = 1$
+			\end{proof}
+
+		\bigskip
+
+		\subsubsection{Teoremi di confronto}
+			\begin{thm}[Teorema della permanenza del segno]\index{Teorema! della permanenza del segno}
+				Se $\lim_{n\to +\infty}a_{n} = a > 0$ allora esiste un numero tale che $a_{n}>0$ per ogni $n>N$
+			\end{thm}
+			\begin{proof}
+				Sia $a>0$ e un numero $\epsilon={{a}\over{2}}$, allora esiste un numero $N$ per cui $|a_{n}-a|<{{a}\over{2}}$ per ogni $n>N$. Ci\`{o} significa che 
+				$$\forall n>N \Rightarrow a-{{a}\over{2}}<a_{n}<{{a}\over{2}}+a \equiv a_n>\left(a-{{a}\over{2}}\right)={{a}\over{2}}>0$$
+			\end{proof}
+
+			\medskip
+
+			\begin{thm}[Teorema dei Carabinieri]\index{Teorema! dei Carabinieri}
+				Siano $a_{n}$, $b_{n}$, $c_{n}$ tre successioni tali che $\forall n \in \N \; . \; a_{n} \le c_{n} \le b_{n}$.
+				Se $\lim_{n\to+\infty}a_{n}=\lim_{n\to+\infty}b_{n}=a$ allora anche $c_{n}$ \`{e} convergente e $\lim_{n\to+\infty}a_{n}=a$
+			\end{thm}
+			\begin{proof}
+				Ragionando per ipotesi:\\
+				$$\forall \epsilon > 0 \left[\left(\exists \upsilon_{1} \colon \forall n>\upsilon_{1} \; . \; |a_{n}-a|<\epsilon\right) \wedge \left(\exists \upsilon_{2} \colon \forall n>\upsilon_{2} \; . \; |b_{n}-a|<\epsilon\right)\right]$$
+				Quindi se $n>\upsilon=\max\{\upsilon_{1}, \upsilon_{2}\}$ avremmo
+				$$a-\epsilon < a_{n} \le c_{n} \le b_{n} < a+\epsilon$$
+				Quindi come volevasi dimostrare avremmo $\forall n>\upsilon \; . \; |c_{n}-a|<\epsilon$
+			\end{proof}
+
+	\subsection{Successioni Monotone}
+			\begin{lem}[Monotonia]\index{Monotonia}
+				Sia $a_{n}$ una successione:
+				\begin{itemize}
+					\item si dice \textbf{strettamente crescente} se: $\forall n \in \N \; . \; a_{n} < a{n+1}$
+					\item si dice \textbf{crescente} se: $\forall n \in \N \; . \; a_{n} \le a{n+1}$
+					\item si dice \textbf{strettamente decrescente} se: $\forall n \in \N \; . \; a_{n}>a{n+1}$
+					\item si dice \textbf{decrescente} se: $\forall n \in \N \; . \; a_{n} \ge a{n+1}$
+				\end{itemize}
+				$a_{n}$ si dice monotona se soddisfa una delle condizioni sopra citate
+			\end{lem}
+
+			Se una successione \`{e} sia crescente che decrescente contemporaneamente, allora si dice \textbf{costante}.
+
+			\medskip
+
+			\begin{thm}[Successioni monotone]\index{Teorema! delle successioni monotone}
+				Ogni successione monotona ammette limite. In particolare, ogni successione limitata \`{e} convergente cio\`{e} ammette limite finito
+			\end{thm}
+			\begin{proof}
+				Sia $a_{n}$ crescente e limitata. Fissato $l=\sup_{n}a_{n}$ e $\epsilon>0$, per le propriet\`{a} dell'estremo superiore esiste un $\upsilon \in \N$ tale che 
+				$$l-\epsilon<a_{\upsilon}$$
+				Per $n>\upsilon$ risulta che $a_{\upsilon}<a_{n}$ e quindi
+				$$l-\epsilon < a_{\upsilon} \le a_{n} \le l < l+\epsilon$$
+				ergo
+				$$\lim_{n\to+\infty}a_{n}=l$$
+			\end{proof}
+
+			\medskip
+
+			\begin{lem}[Sottosuccessione o successione estratta]\index{Successione estratta}
+				Sia $a_{n}$ una successione $\N \to X$ e $n_{k}$ una successione crescente $\N\to\N$. Si dice sottosuccessione o successione estratta
+				$$a_{n}(n_{k}) \equiv a_{n_{k}}$$
+			\end{lem}
+
+			Un esempio di estratta se $a_{n}$ \`{e} la successione di numeri interi e $n_{k}=2k$, l'estratta sar\`{a} $a_{n_{k}}=n_{2k}$ e cio\`{e} la successione dei numeri pari.
+
+			\smallskip
+
+			\begin{thm}
+				Se $a_{n}$ converge verso $a$ allora ogni estratta $a_{n_{k}}$ converge verso $a$
+			\end{thm}
+			\begin{proof}
+				Dato $\epsilon>0$ esiste una $k_{0}$ tale che per ogni $n>k_{0}$ vale $|a_{n}-a|<\epsilon$. Se $k>k_{0}$ ed $n_{k} \ge k$ allora si avr\`{a} anche $n_{k}>k_{0}$ e quindi $|a_{n_{k}}-a|<\epsilon$
+			\end{proof}
+
+			\smallskip
+
+			\begin{thm}[Bolzano-Weierstrass]\index{Teorema! di Bolzano-Weierstrass}
+				Sia $a_{n}$ una successione limitata, allora esiste almeno una sua estratta convergente
+			\end{thm}
+			\begin{proof}
+				Supponendo $I$ l'insieme degli elementi di $a_{n}$, si distinguono due casi:
+				\begin{enumerate}
+					\item Se $I$ \`{e} finito allora esiste almeno un elemento $a \in I$ che si ripete infinite volte, cio\`{e} che esistono infiniti indici di $n_{k}$ tali che per ogni $k\in\N$ $a_{n_{k}}=a$ e quindi $\lim_{k\to+\infty}a_{n_{k}}=a$
+					\item Se $I$ \`{e} infinito allora bisogna osservare che essendo $a_{n}$ limitata, esister\`{a} un intervallo $[x,y]$ in  cui esista $I$. Se si divide l'intervallo $[x,y]$ in due infinite volte, e si sceglie sempre la parte che contiene $I$, otterremmo una successione di intervalli
+					$$I_{1} \supset I_{2} \supset \dots \supset I_{n}$$
+					avente le propriet\`{a}
+					$y_{n}-x_{n}={{y-x}\over{2^{n}}}$ e $I \cap I_{n}$ \`{e} infinito. 
+					Tale successione, essendo limitata, e crescente per costruzione, e per il teorema sulle successioni monotone, ammette limite finito con valore $l$.
+					Sia $a_{n_{k}}$ il primo termine appartenente a $[x_{k}, y_{k}]$ con $n_{k}>n_{k-1}$, implica che $a_{n_{k}}$ \`{e} estratta da $a_{n}$ perci\`{o}
+					$$x_{k} \le a_{n_{k}} \le \left(y_{k} = x_{k}+{{y-x}\over{2^{k}}}\right)$$
+					Passando al limite e utilizzando il teorema dei carabinieri si ottiene
+					$$\lim_{k \to +\infty}a_{n_{k}} = l$$
+				\end{enumerate}
+			\end{proof}
+
+	\subsection{Massimo e Minimo Limite}
+			\begin{lem}[Minimo Limite]\index{Minimo Limite}
+				Si chiama minimo limite o limite inferiore di una successione $a_{n}$ mediante la posizione
+				$$\lim_{n\to+\infty}a_{n} = \sup_{k\in\N}\inf_{n \ge k}a_{n} = l'$$
+			\end{lem}
+
+			\begin{lem}[Massimo Limite]\index{Massimo Limite}
+				Si chiama massimo limite o limite superiore di una successione $a_{n}$ mediante la posizione
+				$$\lim_{n\to+\infty}a_{n} = \inf_{k\in\N}\sup_{n \ge k}a_{n} = l'$$
+			\end{lem}
+
+	\subsection{Successioni di funzioni}
+	Sia $f_{n}$ una successione di funzioni in $C([0, 1]; \R)$, ovvero tale che $f_{n}$ \`{e} una funzione continua per ogni $n \in \N$. 
+	Supponiamo di sapere che, per ogni $x \in [0, 1]$, esiste un numero reale $f(x)$ tale che	$f(x) = \lim_{n\to+\infty}f_{n}(x)$, ovvero si ha che $f_{n}$ converge puntualmente a $f$. 
+	Per sapere quando la $f$ \`{e} a sua volta continua \`{e} necessario capire che si tratta del problema di "scambio di limiti"; infatti, la continuit\`{a} di una funzione \`{e} definita tramite un limite, e quindi ci stiamo chiedendo se valga la seguente uguaglianza:
+	$$\lim_{x \to x_{0}}[lim_{n\to+\infty}f_{n}(x)] \overset{?}{=} \lim_{n\to+\infty}[lim_{x\to x_{0}}f_{n}(x)]$$
+	Infatti, "espandendo" le parentesi quadre, ed usando la continuit\`{a} di $f_{n}$, tale uguaglianza si riscrive
+	$$\lim_{x\to x_{0}}f(x)	\overset{?}{=} \lim_{n\to+\infty}f_{n}(x_{0}) = f(x_{0})$$
+	Ora, lo scambio di limiti non \`{e} sempre possibile, ed anche quando \`{e} possibile non necessariamente le propriet\`{a} possedute da $f_{n}$ per ogni $n$ sono conservate dal limite $f$.
